@@ -1,0 +1,158 @@
+.bg-purple {
+    background-color: #46297c;
+}
+
+.bg-grey {
+    background-color: lightgray;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.button-blue {
+    background-color: turquoise;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    &:hover {
+        background-color: #2eafa2;
+    }
+}
+
+.left-side {
+    width: 45%;
+    color: white;
+}
+
+.big-text {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.right-side {
+    width: 55%;
+    padding-top: -20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.h-100px {
+    height: 100px;
+}
+
+.img-illustration {
+    width: 100%;
+}
+
+.how-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: -120%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    text-align: center;
+    h4 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+
+.sub-size {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mt-300 {
+    margin-top: 300px;
+}
+
+.f-left {
+    width: 45%;
+    .pool {
+        background-color: lightgray;
+        span {
+            font-weight: bold;
+            color: #46297c;
+        }
+        .p-img {
+            color: #46297c;
+        }
+    }
+    .text-only {
+        font-size: 15px;
+        padding-left: 3em;
+    }
+}
+
+.f-right {
+    width: 55%;
+    .f-img {
+        width: 100%;
+    }
+}
+
+.arrow-down-white {
+    color: white;
+    font-size: 30px;
+}
+
+.text-purple {
+    color: #46297c;
+}
+
+.check-purple {
+    color: #46297c;
+    margin-right: 5px;
+}
+
+.vertical-super {
+    vertical-align: super;
+}
+
+.card-bg-purple {
+    border: none;
+    border-radius: .3rem;
+    .top {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+    }
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.adat-left {
+    width: 50%;
+
+}
+
+.adat-right {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer-text {
+    color: white;
+    font-size: 12px;
+    text-align: justify;
+    text-justify: inter-word;
+}
