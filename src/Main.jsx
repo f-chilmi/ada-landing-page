@@ -458,9 +458,9 @@ export default function Main() {
                     <div className="mt-4 pb-5">*Marketing, developments and ADATshare tokens are locked</div>
 
                 </div>
-                <div className="adat-right">
-                    <Card className="shadow">
-                        <img src="/assets/adat_token.png" alt="image" />
+                <div className="adat-right h-100">
+                    <Card className="shadow h-75">
+                        <img src="/assets/adat_token.png" alt="image"  />
                     </Card>
                 </div>
             </div>
