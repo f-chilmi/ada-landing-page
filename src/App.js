@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Main from './Main';
 import Dashboard from './pages/Dashboard';
+import LivePairs from './pages/LivePairs';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/dashboard">
           <Dashboard />
+        </Route>
+        <Route path="/live-pairs">
+          <LivePairs />
         </Route>
       </Switch>
     </Router>

@@ -99,6 +99,10 @@ export default function Dashboard() {
                 </div>
                 <hr />
                 <div className="body-card">
+                  <div className="search-wrapper">
+                    <input type="text" className="form-control input-dark " placeholder="Filter by token" />
+                    <i className="material-icons">search</i>
+                  </div>
                   <div className="pair mb-2">
                     <img src="/assets/icons/11.svg" alt="icons" />
                     <span className="ps-2 ">Live New Pairs</span>
