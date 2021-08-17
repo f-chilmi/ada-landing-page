@@ -10,6 +10,7 @@ import {
 import Main from './Main';
 import Dashboard from './pages/Dashboard';
 import LivePairs from './pages/LivePairs';
+import PairExplorer from './pages/PairExplorer';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/live-pairs">
           <LivePairs />
+        </Route>
+        <Route path="/pair-explorer">
+          <PairExplorer />
         </Route>
       </Switch>
     </Router>

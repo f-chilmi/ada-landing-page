@@ -1,5 +1,8 @@
 body {
   font-size: 13px;
+  p {
+    margin-bottom: 0;
+  }
 }
 .top-h {
   height: 70px;
@@ -142,6 +145,23 @@ body {
   }
 }
 
+.f20 {
+  font-size: 20px;
+}
+
+.down {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  transform: rotate(90deg);
+  color: red;
+  font-size: 14px;
+}
+.up {
+  -ms-transform: rotate(270deg); /* IE 9 */
+  transform: rotate(270deg);
+  color: green;
+  font-size: 14px;
+}
+
 .hot-list {
   display: flex;
   justify-content: space-between;
@@ -182,18 +202,7 @@ body {
       margin-right: 10px;
     }
   }
-  .down {
-    -ms-transform: rotate(90deg); /* IE 9 */
-    transform: rotate(90deg);
-    color: red;
-    font-size: 14px;
-  }
-  .up {
-    -ms-transform: rotate(270deg); /* IE 9 */
-    transform: rotate(270deg);
-    color: green;
-    font-size: 14px;
-  }
+  
   .i-right {
     width: 5%;
     display: flex;
@@ -250,6 +259,14 @@ body {
   color: lightgray;
 }
 
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
+}
+
 .body-body {
   background-color: #160b2c;
 }
@@ -269,17 +286,34 @@ body {
 }
 
 .search-wrapper {
-  position: relative;
+  display: flex;
+  .input-wrapper {
+    position: relative;
+  }
   i {
     position: absolute;
     right: 5%;
     top: 15%;
     color: white;
+    &.refresh-icon {
+      position: relative;
+    }
   }
   .input-dark {
     background-color: #030207;
     border: none;
     color: whitesmoke;
+  }
+  .refresh-div-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: aqua;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -321,4 +355,150 @@ body {
   color: white;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.icons-tab {
+  background-color: #46297c;
+  color: aqua;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  i {
+    font-size: 20px;
+  }
+}
+
+.trade-tab {
+  background-color: aqua;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-adat {
+  .icon-wrapper-white-big {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 55%;
+    }
+  }
+  .text {
+    font-size: 20px;
+    margin-bottom: 0;
+    display: inline;
+    
+  }
+  .sub-text {
+    font-weight: 12px;
+    color: grey;
+    margin-left: 5px;
+  }
+  .text-2 {
+    display: inline-flex;
+    p {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+    .blue-color {
+      color: aqua;
+      &.material-icons {
+        font-size: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.favorites {
+  width: 200px;
+  .list-code {
+    font-size: 10px;
+    .selected {
+      background-color: #110822;
+      margin-left: -1rem;
+      padding-left: 1rem;
+      margin-right: -2rem;
+      padding-right: 2rem;
+    }
+    .x-code {
+      position: absolute;
+      right: 15px;
+      font-weight: bold;
+    }
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  
+}
+
+.info {
+  width: calc(100% - 220px);
+}
+
+.color-aqua {
+  color: aqua;
+}
+
+.color-purple {
+  color: #46297c;
+}
+
+.contract-detail {
+  width: 200px;
+  .ask-small {
+    font-size: 18px;
+  }
+  .sip-ic {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 50%;
+    i {
+      color: white;
+      font-size: 18px;
+
+    }
+  }
+  .hr-wrapper {
+    flex-grow: 1;
+    padding-left: 4px;
+    padding-right: 4px;
+    hr {
+      height: 4px;
+      color: #46297c;
+    }
+  }
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.card-purple {
+  background-color: #46297c;
+  color: white;
+}
+
+.after-no-news {
+  height: 5px !important;
+  background-color: #110822;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
