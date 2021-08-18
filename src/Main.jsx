@@ -5,7 +5,7 @@ import { Container, Nav, Navbar, Button, Row, Col, Card } from 'react-bootstrap'
 export default function Main() {
     return (
         <>
-        <div className="bg-purple">
+        <div className="bg-purple pt-3">
 
             {/* navbar  */}
           <Container>
@@ -111,14 +111,14 @@ export default function Main() {
         </div>
     
         <Container>
-            <p className="sub-size mt-300 text-center">FEATURES</p>
+            <p className="sub-size mt-300 text-center mb-5">FEATURES</p>
             <div className="d-flex">
                 <div className="f-left pe-2">
                     <div className="pool p-2">
                         <img src="/assets/icons/11.svg" alt="icons" className="p-img" />
                         <span className="ps-2">Pool Explorer</span>
                     </div>
-                    <p className="text-only">
+                    <p className="text-only py-2">
                         Search for new pools, add or remove liquidity in a pair, find the best gems and avoid the scams.
                     </p>
 
@@ -464,9 +464,9 @@ export default function Main() {
                     <div className="mt-4 pb-5">*Marketing, developments and ADATshare tokens are locked</div>
 
                 </div>
-                <div className="adat-right h-100">
-                    <Card className="shadow h-75">
-                        <img src="/assets/adat_token.png" alt="image"  />
+                <div className="adat-right" style={{ height: ' 90%' }} >
+                    <Card className="shadow h-100">
+                        <img className="h-100" src="/assets/adat_token.png" alt="image"  />
                     </Card>
                 </div>
             </div>
@@ -478,12 +478,29 @@ export default function Main() {
                 <p className="footer-text">
                     All contents are available on our website, on hyperlinked websites, and on applications, forums, blogs, social media accounts, and other platform associated with ADA Tools is intended solely to provide you with general information. We make no warranties of any kind with respect to our content, including but not limited to, the accuracy and currency of the information. None of the content we provide should be construed as financial, legal, or any other type of advice on which you may spesifically rely on any purpose. Any use or reliance you place of our content is solely at your own risk. What you should do is conduct your our research, review and analysis, and verify our content before relying on it. Trading is a high-risk activity that can result in significant losses. So you should consult with your financial advisor before making any decisions. Nothing on our site should be considered an invitation or offer to take any action.
                 </p>
-                <p className="text-white m-0">
-                    <span className="material-icons">copyright</span>
-                    <span className="vertical-super ms-1">ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com</span>    
-                </p>
+
+                <div className="d-flex justify-content-between mt-3">
+                    <p className="text-white pb-3">
+                        <span className="material-icons">copyright</span>
+                        <span className="vertical-super ms-1">ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com</span>    
+                    </p>
+
+                    <div className="soc-icon ">
+                        <div className="icon-wrapper-soc me-2">
+                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                        </div>
+                        <div className="icon-wrapper-soc mx-2">
+                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                        </div>
+                        <div className="icon-wrapper-soc ms-2">
+                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                        </div>
+                    </div>  
+                </div>
+                
             </Container>
         </div>
+
 
         </>
       );

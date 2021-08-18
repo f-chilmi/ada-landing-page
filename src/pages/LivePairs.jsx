@@ -600,9 +600,6 @@ export default function LivePairs() {
                 </div>
               </div>   
             </div>
-
-            
-                
           </div>
 
 
