@@ -462,20 +462,6 @@ body {
   .ask-small {
     font-size: 18px;
   }
-  .sip-ic {
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    border-radius: 50%;
-    i {
-      color: white;
-      font-size: 18px;
-
-    }
-  }
   .hr-wrapper {
     flex-grow: 1;
     padding-left: 4px;
@@ -484,6 +470,21 @@ body {
       height: 4px;
       color: #46297c;
     }
+  }
+}
+
+.sip-ic {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  border-radius: 50%;
+  i {
+    color: white;
+    font-size: 18px;
+
   }
 }
 
@@ -501,4 +502,46 @@ body {
   background-color: #110822;
   margin-left: -1rem;
   margin-right: -1rem;
+}
+
+.trade-bottom-tab {
+  background-color: aqua;
+  color: white;
+  border-top-left-radius: 10px;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.positions-tab {
+  background-color: #190f2c;
+  color: grey;
+  border-top-left-radius: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.rest-tab {
+  flex: 1;
+  display: flex;
+  background-color: #1f1138;
+  color: lightgray;
+  border-top-right-radius: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  border-bottom: 1px solid #110822;
+}
+
+.border-dark-purple {
+  border-left: 1px solid #110822;
+  border-right: 1px solid #110822;
 }

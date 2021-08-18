@@ -3,446 +3,297 @@ import BootstrapTable from 'react-bootstrap-table-next';
 
 
 export default function PairExplorer() {
+
   const columns = [
-  {
-    dataField: 'token',
-    text: 'Token',
-    sort: true,
-    headerClasses: 'border-bottom'
-  }, 
-  {
-    dataField: 'listed',
-    text: 'Listed Since',
-    sort: true,
-    headerClasses: 'border-bottom'
-  }, 
-  {
-    text: 'Actions',
-    headerClasses: 'border-bottom',
-    formatter: () => {
-      return (
-        <div className="d-flex justify-content-between">
-          <div className="icon-wrapper-table ">
-            <img src="assets/icons/babydb.png" alt="icon" />
+    {
+      dataField: 'date',
+      text: 'Date',
+      sort: true,
+      headerClasses: 'border-dark-purple',
+      classes: 'border-dark-purple text-center'
+    }, 
+    {
+      dataField: 'type',
+      text: 'Type',
+      sort: true,
+      headerClasses: 'border-dark-purple',
+      classes: 'border-dark-purple text-center',
+      formatter: (cell, row) => {
+        if (cell === 'Sell') return <div className="text-red">{cell}</div>
+        return <div className="text-green">{cell}</div>
+      }
+    },
+    {
+      dataField: 'priceUSD',
+      text: 'Price USD',
+      sort: true,
+      headerClasses: 'border-dark-purple',
+      classes: 'border-dark-purple',
+    }, 
+    {
+      dataField: 'priceBNB',
+      text: 'Price BNB',
+      sort: true,
+      headerClasses: 'border-dark-purple',
+      classes: 'border-dark-purple',
+    }, 
+    {
+      dataField: 'amount',
+      text: 'Amount ADAT',
+      sort: true,
+      classes: 'border-dark-purple',
+      headerClasses: 'border-dark-purple'
+    }, 
+    {
+      dataField: 'totalBNB',
+      text: 'totalBNB',
+      sort: true,
+      classes: 'border-dark-purple',
+      headerClasses: 'border-dark-purple'
+    }, 
+    {
+      dataField: 'maker',
+      text: 'MAKER',
+      sort: true,
+      classes: 'border-dark-purple',
+      headerStyle: { textAlign: 'center' },
+      headerClasses: 'border-dark-purple text-center',
+    },
+    {
+      text: 'Others',
+      headerClasses: 'border-dark-purple',
+      classes: 'border-dark-purple',
+      headerStyle: { textAlign: 'center' },
+      formatter: () => {
+        return (
+          <div className="d-flex justify-content-between">
+            <div className="icon-wrapper-table ">
+              <img src="assets/icons/babydb.png" alt="icon" />
+            </div>
+            <div className="icon-wrapper-table mx-2">
+              <img src="assets/icons/bscscan.png" alt="icon" />
+            </div>
+            <div className="icon-wrapper-table me-2">
+              <img src="assets/icons/uniswap.png" alt="icon" />
+            </div>
+            <div className="icon-wrapper-table">
+              <img src="assets/icons/32.svg" alt="icon" />
+            </div>
           </div>
-          <div className="icon-wrapper-table mx-2">
-            <img src="assets/icons/bscscan.png" alt="icon" />
-          </div>
-          <div className="icon-wrapper-table me-2">
-            <img src="assets/icons/uniswap.png" alt="icon" />
-          </div>
-          <div className="icon-wrapper-table">
-            <img src="assets/icons/32.svg" alt="icon" />
-          </div>
-        </div>
-      )
-    }
-  },
-  {
-    dataField: 'contract',
-    text: 'Contract Details',
-    headerClasses: 'border-bottom',
-    formatter: () => {
-      return (
-        <div className="d-flex justify-content-between">
-          <div className="icon-wrapper-table ">
-            <img src="assets/icons/21.svg" alt="icon" />
-          </div>
-          <div className="icon-wrapper-table mx-2">
-            <img src="assets/icons/20.svg" alt="icon" />
-          </div>
-          <div className="icon-wrapper-table me-2">
-            <img src="assets/icons/19.svg" alt="icon" />
-          </div>
-          <div className="icon-wrapper-table">
-            <img src="assets/icons/18.svg" alt="icon" />
-          </div>
-        </div>
-      )
-    }
-  }, 
-  {
-    dataField: 'tokenPrice',
-    text: 'Token Price: BNB',
-    sort: true,
-    headerClasses: 'border-bottom'
-  }, 
-  {
-    dataField: 'liquidity',
-    text: 'Total Liquidity',
-    sort: true,
-    headerClasses: 'border-bottom'
-  }, 
-  {
-    dataField: 'poolAmount',
-    text: 'Pool Amount',
-    sort: true,
-    headerClasses: 'border-bottom'
-  }, 
-  {
-    dataField: 'poolVariation',
-    text: 'Pool Variation',
-    sort: true,
-    headerClasses: 'border-bottom',
-    formatter: (cell, row) => {
-      if (cell === "0%") return (
-        <div className="grey-0 text-center">
-          <p className="text-center m-0"> {cell}</p>
-        </div>
-      )
-      if (cell === "531.32%") return (
-        <div className="green-0 text-center">
-          <p className="text-center m-0"> {cell}</p>
-        </div>
-      )
-      if (cell === "-100%") return (
-        <div className="red-0 text-center">
-          <p className="text-center m-0"> {cell}</p>
-        </div>
-      )
-      return null
-    }
-  }, 
-  {
-    dataField: 'poolRemaining',
-    text: 'Pool Remaining',
-    sort: true,
-    headerClasses: 'border-bottom'
-  }, 
-];
+        )
+      }
+    },
+    ];
+  
 
   const data = [
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '1,2888.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Buy',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
     {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
+      date: '2021-08-04 19:55:00',
+      type: 'Sell',
+      priceUSD: '$0.28029358',
+      priceBNB: '$0.26103948',
+      amount: '0.00019201.32',
+      totalBNB: '$0.289301',
+      maker: '0xske374...6631'
     },
-    {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
-    },
-    {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
-    },
-    {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
-    },
-    {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
-    },
-    {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
-    },
-    {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
-    },
-    {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
-    },
-    {
-      token: "META",
-      listed: "48 m 13 s",
-      contract: 0,
-      tokenPrice: "$0.04004121",
-      liquidity: "$133,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "0%",
-      poolRemaining: "4.5 BNB"
-    },
-    {
-      token: "RALPH",
-      listed: "1 h 48 m 13 s",
-      contract: 2,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "52.48111293 ETH",
-      poolVariation: "531.32%",
-      poolRemaining: "52.48111293 ETH"
-    },
-    {
-      token: "MIMETIC",
-      listed: "2 h 48 m 13 s",
-      contract: 1,
-      tokenPrice: "$0.03099911",
-      liquidity: "$296,911.9",
-      poolAmount: "4.5 BNB",
-      poolVariation: "-100%",
-      poolRemaining: "4.5 BNB"
-    },
-
   ]
   
   
@@ -888,6 +739,25 @@ export default function PairExplorer() {
                     </div>
                   </div>
 
+                </div>
+
+                <div className="ps-3" style={{ flex: 1, maxHeight: 1087 }}>
+                  <div className="d-flex">
+                    <div className="trade-bottom-tab">Trade History</div>
+                    <div className="positions-tab">My Positions</div>
+                    <div className="rest-tab">
+                      <p>ADAT <span style={{ fontSize: 12 }}>(last 526 trades)</span></p>
+                      <div className="sip-ic ms-3">
+                        <i className="material-icons">filter_alt</i>
+                      </div>
+                    </div>
+                  </div>
+                  <BootstrapTable 
+                    keyField='id' 
+                    data={ data } 
+                    columns={ columns } 
+                    bordered={ false }
+                  />
                 </div>
 
               </div>
