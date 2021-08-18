@@ -99,9 +99,9 @@ export default function Dashboard() {
                 </div>
                 <hr />
                 <div className="body-card">
-                  <div className="search-wrapper">
-                    <input type="text" className="form-control input-dark " placeholder="Filter by token" />
-                    <i className="material-icons">search</i>
+                  <div className="search-wrapper mb-2 position-relative">
+                    <input type="text" className="form-control input-dark " placeholder="Search pair" />
+                    <i className="material-icons" style={{ top: '20%' }}>search</i>
                   </div>
                   <div className="pair mb-2">
                     <img src="/assets/icons/11.svg" alt="icons" />
@@ -130,7 +130,7 @@ export default function Dashboard() {
                     <img src="/assets/icons/13.svg" alt="icons" />
                     <span className="ps-2 ">MultiSwap</span>
                   </div>
-                  <div className="pair ">
+                  <div className="pair mb-2">
                     <img src="/assets/icons/01.svg" alt="icons" />
                     <span className="ps-2">Wallet Information</span>
                   </div>
@@ -333,7 +333,7 @@ export default function Dashboard() {
                     </div>
                   </div>
                 
-                  <div className="list-featured">
+                  <div className="list-featured mt-4">
                     <div className="num">2</div>
                     <div className="body-featured">
                       <div className="up-featured mb-2">
@@ -441,19 +441,30 @@ export default function Dashboard() {
             </div>
 
           </div>
-
-
           </div>
 
-          <div className="footer-copyright bg-purple-dark">
-            <p className="text-white m-0 container ">
-              <span className="material-icons">copyright</span>
-              <span className="vertical-super ms-1">
-                ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com
-              </span>    
-            </p>
-                
-          </div>
+          <div className="bg-purple-dark pt-5">
+            <div className="container">
+                <div className="d-flex justify-content-between mt-3">
+                    <p className="text-white pb-3">
+                        <span className="material-icons">copyright</span>
+                        <span className="vertical-super ms-1">ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com</span>    
+                    </p>
+
+                    <div className="soc-icon ">
+                        <div className="icon-wrapper-soc me-2">
+                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                        </div>
+                        <div className="icon-wrapper-soc mx-2">
+                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                        </div>
+                        <div className="icon-wrapper-soc ms-2">
+                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
 
         </div>
       </div>
