@@ -766,30 +766,27 @@ export default function PairExplorer() {
 
 
           {/* footer  */}
-          <div className="footer-copyright bg-purple-dark pt-5">
-            <div className="text-white m-0 container d-flex justify-content-between ">
-              <div>
-                <span className="material-icons">copyright</span>
-                <span className="vertical-super ms-1">
-                  ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com
-                </span> 
+          <div className=" " style={{ backgroundColor: '#160b2c' }}>
+            <div className="container">
+              <div className="d-flex justify-content-between ">
+                <p className="text-white pb-3">
+                  <span className="material-icons">copyright</span>
+                  <span className="vertical-super ms-1">ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com</span>    
+                </p>
+
+                <div className="soc-icon ">
+                  <div className="icon-wrapper-soc me-2">
+                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  </div>
+                  <div className="icon-wrapper-soc mx-2">
+                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  </div>
+                  <div className="icon-wrapper-soc ms-2">
+                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  </div>
+                </div>  
               </div>
-
-              <div className="soc-icon">
-                <div className="icon-wrapper-soc me-2">
-                  <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                </div>
-                <div className="icon-wrapper-soc mx-2">
-                  <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                </div>
-                <div className="icon-wrapper-soc ms-2">
-                  <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                </div>
-              </div>   
             </div>
-
-            
-                
           </div>
 
 
