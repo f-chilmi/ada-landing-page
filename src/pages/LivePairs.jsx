@@ -8,17 +8,23 @@ export default function LivePairs() {
     dataField: 'token',
     text: 'Token',
     sort: true,
-    headerClasses: 'border-bottom'
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center'
   }, 
   {
     dataField: 'listed',
     text: 'Listed Since',
     sort: true,
-    headerClasses: 'border-bottom'
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center'
   }, 
   {
     text: 'Actions',
-    headerClasses: 'border-bottom',
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center',
     formatter: () => {
       return (
         <div className="d-flex justify-content-between">
@@ -41,7 +47,9 @@ export default function LivePairs() {
   {
     dataField: 'contract',
     text: 'Contract Details',
-    headerClasses: 'border-bottom',
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center',
     formatter: () => {
       return (
         <div className="d-flex justify-content-between">
@@ -65,25 +73,33 @@ export default function LivePairs() {
     dataField: 'tokenPrice',
     text: 'Token Price: BNB',
     sort: true,
-    headerClasses: 'border-bottom'
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center'
   }, 
   {
     dataField: 'liquidity',
     text: 'Total Liquidity',
     sort: true,
-    headerClasses: 'border-bottom'
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center'
   }, 
   {
     dataField: 'poolAmount',
     text: 'Pool Amount',
     sort: true,
-    headerClasses: 'border-bottom'
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center'
   }, 
   {
     dataField: 'poolVariation',
     text: 'Pool Variation',
     sort: true,
-    headerClasses: 'border-bottom',
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center',
     formatter: (cell, row) => {
       if (cell === "0%") return (
         <div className="grey-0 text-center">
@@ -107,7 +123,9 @@ export default function LivePairs() {
     dataField: 'poolRemaining',
     text: 'Pool Remaining',
     sort: true,
-    headerClasses: 'border-bottom'
+    headerClasses: 'border-dark-purple',
+    headerStyle: { textAlign: 'center' },
+    classes: 'border-dark-purple text-center'
   }, 
 ];
 
@@ -558,12 +576,12 @@ export default function LivePairs() {
                     LIVE NEW PAIRS
                   </span>
                 </h6>
-                <div className="search-wrapper">
+                <div className="search-wrapper position-relative">
                   <input type="text" className="form-control input-dark " placeholder="Filter by token" />
                   <i className="material-icons">search</i>
                 </div>
               </div>
-              <p className="text-grey">Search for live new pairs and pool updates</p>
+              <p className="text-grey pb-5">Search for live new pairs and pool updates</p>
 
               <BootstrapTable 
                 keyField='id' 
@@ -579,26 +597,26 @@ export default function LivePairs() {
 
 
           {/* footer  */}
-          <div className="footer-copyright bg-purple-dark">
-            <div className="text-white m-0 container d-flex justify-content-between ">
-              <div>
-                <span className="material-icons">copyright</span>
-                <span className="vertical-super ms-1">
-                  ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com
-                </span> 
-              </div>
+          <div className=" " style={{ backgroundColor: '#160b2c' }}>
+            <div className="container">
+              <div className="d-flex justify-content-between ">
+                <p className="text-white pb-3">
+                  <span className="material-icons">copyright</span>
+                  <span className="vertical-super ms-1">ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com</span>    
+                </p>
 
-              <div className="soc-icon">
-                <div className="icon-wrapper-soc me-2">
-                  <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                </div>
-                <div className="icon-wrapper-soc mx-2">
-                  <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                </div>
-                <div className="icon-wrapper-soc ms-2">
-                  <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                </div>
-              </div>   
+                <div className="soc-icon ">
+                  <div className="icon-wrapper-soc me-2">
+                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  </div>
+                  <div className="icon-wrapper-soc mx-2">
+                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  </div>
+                  <div className="icon-wrapper-soc ms-2">
+                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  </div>
+                </div>  
+              </div>
             </div>
           </div>
 
