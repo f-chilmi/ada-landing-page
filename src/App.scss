@@ -156,3 +156,29 @@
     text-align: justify;
     text-justify: inter-word;
 }
+
+.user-plan-wrap {
+    position: relative;
+    .bg1 {
+        position: absolute;
+        z-index: 1;
+    }
+    .user-plan-wrap-2 {
+        position: relative;
+        z-index: 9;
+        min-height: 898px;
+    }
+}
+
+.roadmap-wrap {
+    position: relative;
+    .bg2 {
+        position: absolute;
+        z-index: 1;
+    }
+    .roadmap-wrap-2 {
+        position: relative;
+        z-index: 9;
+        // min-height: 898px;
+    }
+}

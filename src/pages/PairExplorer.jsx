@@ -549,7 +549,7 @@ export default function PairExplorer() {
             </div>
           </div>
 
-          <div className="body-body">
+          <div className="body-body pb-5">
 
             <div className="container">
               <div className="d-flex justify-content-between align-items-center pt-4">

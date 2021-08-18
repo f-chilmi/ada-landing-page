@@ -157,13 +157,16 @@ export default function Main() {
             </div>
         </Container>
 
-        <div className="bg-purple">
-            <Container >
+        <div className="bg-purple user-plan-wrap">
+            <div className="bg1">
+                <img src="/assets/bg1.png" alt="background" />
+            </div>
+            <Container className="user-plan-wrap-2" >
 
                 {/* <div className="material-icons arrow-down-white text-center">arrow_drop_down</div> */}
 
                 <p className="sub-size text-center pt-5 mb-0 text-white">USER PLANS</p>
-                <p className="text-center text-white">Choose your subscription tier and upgrade now!</p>
+                <p className="text-center text-white mb-4 mt-2">Choose your subscription tier and upgrade now!</p>
 
                 <Row>
                     <Col className="pe-2">
@@ -361,8 +364,11 @@ export default function Main() {
             </Container>
         </div>
     
-        <div className="bg-black">
-            <Container>
+        <div className="bg-black roadmap-wrap">
+            <div className="bg2">
+                <img src="/assets/bg2.png" alt="background" />
+            </div>
+            <Container className="roadmap-wrap-2">
                 <div className="sub-size text-center pt-5 mb-0 text-white mb-5">ROADMAP</div>
                 <Row>
                     <Col className="pe-2">
