@@ -9,7 +9,7 @@ export default function Main() {
 
             {/* navbar  */}
           <Container>
-            <Navbar>
+            <Navbar expand="lg" >
               <Container>
                 <Navbar.Brand href="#home">
                   <img
@@ -19,8 +19,8 @@ export default function Main() {
                     alt="ADA Logo"
                   />
                 </Navbar.Brand>
-                <Navbar.Toggle />
-                <Navbar.Collapse className="justify-content-end">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
                   <Nav >
                     <Nav.Link href="#home" className="text-white mx-1 fw-bolder">App ADA Tools</Nav.Link>
                     <Nav.Link href="#features" className="text-white mx-1 fw-bolder">Manifesto</Nav.Link>
@@ -33,8 +33,8 @@ export default function Main() {
             </Navbar>
           </Container>
     
-          <div className="container d-flex flex-row">
-            <div className="left-side mt-5 pt-5">
+          <div className="container layout-resp">
+            <div className="left-side ">
               <h1 className="big-text mb-3">
                 BOOST YOUR EXCHANGE EXPERIENCE
               </h1>
@@ -55,7 +55,7 @@ export default function Main() {
             </div>
           </div>
         
-          <div className="text-center pointer">
+          <div className="expand-more">
             <i className="material-icons text-white">expand_more</i>
           </div>
     
@@ -63,7 +63,7 @@ export default function Main() {
             If you are an ADA user, and you want to be able to anticipate market movements and develop better trading strategies, ADA Tools will help you in a very simple way
           </div>
         
-          <div className="w-100 position-relative h-100px">
+          <div className="how-wrap">
             <div className="how-wrapper">
               <div className="mx-2">
                 <img
@@ -111,14 +111,17 @@ export default function Main() {
         </div>
     
         <Container>
-            <p className="sub-size mt-300 text-center mb-5">FEATURES</p>
-            <div className="d-flex">
+            <p className="features-title">FEATURES</p>
+            <div className="features-wrap">
                 <div className="f-left pe-2">
                     <div className="pool p-2">
                         <img src="/assets/icons/11.svg" alt="icons" className="p-img" />
                         <span className="ps-2">Pool Explorer</span>
                     </div>
-                    <p className="text-only py-2">
+                    <div className="pool-exp ps-2">
+                        <img src="/assets/features_image.png" alt="feature" className="f-img" />
+                    </div>
+                    <p className="text-only ps-4 py-2">
                         Search for new pools, add or remove liquidity in a pair, find the best gems and avoid the scams.
                     </p>
 
@@ -168,9 +171,9 @@ export default function Main() {
                 <p className="sub-size text-center pt-5 mb-0 text-white">USER PLANS</p>
                 <p className="text-center text-white mb-4 mt-2">Choose your subscription tier and upgrade now!</p>
 
-                <Row>
-                    <Col className="pe-2">
-                        <Card>
+                <Row >
+                    <Col xs={10} md={4} className="pe-2 my-3 mx-auto">
+                        <Card className="card-radius">
                             <Card.Body className="card-wrapper">
                                 <h4 className="text-purple">FREE</h4>
                                 <hr className="text-purple" />
@@ -213,8 +216,8 @@ export default function Main() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col className="px-2">
-                        <Card>
+                    <Col xs={10} md={4} className="px-2 my-3 mx-auto">
+                        <Card className="card-radius">
                             <Card.Body className="card-wrapper">
                                 <h4 className="text-purple">Standard</h4>
                                 <p>$100 paid in ADAT/Monthly subscription -or- 1,000 ADAT/Hold*</p>
@@ -278,8 +281,8 @@ export default function Main() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col className="pe-2">
-                        <Card>
+                    <Col xs={10} md={4} className="pe-2 mt-3 mx-auto">
+                        <Card className="card-radius">
                             <Card.Body className="card-wrapper">
                                 <h4 className="text-purple">Premium</h4>
                                 <p>1,000 ADAT/Hold*</p>
@@ -357,7 +360,7 @@ export default function Main() {
                     </Col>
                 </Row>
 
-                <div className="text-white text-center mt-5 pb-5">
+                <div className="f-small text-white text-center mt-5 pb-5">
                     *Hold means that you must have the neccessary token in your wallet at the time of sign in and login, this process will be done through any compatible wallet.
                 </div>
 
@@ -369,9 +372,9 @@ export default function Main() {
                 <img src="/assets/bg2.png" alt="background" />
             </div>
             <Container className="roadmap-wrap-2">
-                <div className="sub-size text-center pt-5 mb-0 text-white mb-5">ROADMAP</div>
+                <div className="roadmap-title">ROADMAP</div>
                 <Row>
-                    <Col className="pe-2">
+                    <Col xs={10} md={3} className="pe-2 mt-5 mx-auto">
                         <Card className="card-bg-purple">
                             <div className="text-center bg-purple text-white top py-2 fw-bolder">2021 Q1</div>
                             <Card.Body>
@@ -386,7 +389,7 @@ export default function Main() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col className="px-2">
+                    <Col xs={10} md={3} className="px-2 mt-5 mx-auto">
                         <Card className="card-bg-purple">
                             <div className="text-center bg-purple text-white top py-2 fw-bolder">2021 Q2</div>
                             <Card.Body>
@@ -401,7 +404,7 @@ export default function Main() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col className="px-2">
+                    <Col xs={10} md={3} className="px-2 mt-5 mx-auto">
                         <Card className="card-bg-purple">
                             <div className="text-center bg-purple text-white top py-2 fw-bolder">2021 Q3</div>
                             <Card.Body>
@@ -413,7 +416,7 @@ export default function Main() {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col className="pe-2">
+                    <Col xs={10} md={3} className="pe-2 mt-5 mx-auto">
                         <Card className="card-bg-purple">
                             <div className="text-center bg-purple text-white top py-2 fw-bolder">2021 Q4</div>
                             <Card.Body>
@@ -426,7 +429,7 @@ export default function Main() {
                     </Col>
                 </Row>
 
-                <div className="mt-5 text-white text-center pb-5">
+                <div className="mt-5 f-small text-white text-center pb-5">
                     This is a floating roadmap, so timelines are flexible. This is beacouse we must be agile and responsive to industry, technological and community needs. In fact, many of our existing and feature features are community requests. So please do understand that this roadmap, espescially for items outside of imminent release, is subject to charge.
                 </div>
 
@@ -435,33 +438,33 @@ export default function Main() {
         
         <div className="bg-grey">
 
-            <div className="text-center sub-size pt-5 mb-5">ADAT TOKEN</div>
+            <div className="adat-token-title container">ADAT TOKEN</div>
 
-            <div className="container position-relative">
+            <div className="container adat-wrapper">
                 <div className="adat-left">
-                    <div className="d-flex">
-                        <p className="w-40 mb-0 fw-bolder">Token Name</p>
-                        <p className="w-60 mb-0">: ADAT</p>
+                    <div className="wrapper">
+                        <p className="name">Token Name:</p>
+                        <p className="contain">ADAT</p>
                     </div>
-                    <div className="d-flex">
-                        <p className="w-40 mb-0 fw-bolder">Contract</p>
-                        <p className="w-60 mb-0">: 0xvdclwha72v3j29..</p>
+                    <div className="wrapper">
+                        <p className="name">Contract:</p>
+                        <p className="contain">0xvdclwha72v3j29..</p>
                     </div>
-                    <div className="d-flex">
-                        <p className="w-40 mb-0 fw-bolder">Total Supply</p>
-                        <p className="w-60 mb-0">: 150,000,000 ADAT</p>
+                    <div className="wrapper">
+                        <p className="name">Total Supply:</p>
+                        <p className="contain">150,000,000 ADAT</p>
                     </div>
-                    <div className="d-flex">
-                        <p className="w-40 mb-0 fw-bolder">Circulating Supply</p>
-                        <p className="w-60 mb-0">: 150,000,000 ADAT</p>
+                    <div className="wrapper">
+                        <p className="name">Circulating Supply:</p>
+                        <p className="contain">150,000,000 ADAT</p>
                     </div>
-                    <div className="my-4">
+                    <div className="my-4 desc">
                         ADAT Token is neccessary to access subscription tiers and benefit from unlocking all of the features of the ADAT ecosystem.
                     </div>
 
                     <Button className="button-blue mx-1 fw-bolder shadow">Buy ADAT Tokens</Button>
 
-                    <div className="mt-4 pb-5">*Marketing, developments and ADATshare tokens are locked</div>
+                    <div className="mt-4 pb-5 desc-sm">*Marketing, developments and ADATshare tokens are locked</div>
 
                 </div>
                 <div className="adat-right" style={{ height: ' 90%' }} >
@@ -479,8 +482,8 @@ export default function Main() {
                     All contents are available on our website, on hyperlinked websites, and on applications, forums, blogs, social media accounts, and other platform associated with ADA Tools is intended solely to provide you with general information. We make no warranties of any kind with respect to our content, including but not limited to, the accuracy and currency of the information. None of the content we provide should be construed as financial, legal, or any other type of advice on which you may spesifically rely on any purpose. Any use or reliance you place of our content is solely at your own risk. What you should do is conduct your our research, review and analysis, and verify our content before relying on it. Trading is a high-risk activity that can result in significant losses. So you should consult with your financial advisor before making any decisions. Nothing on our site should be considered an invitation or offer to take any action.
                 </p>
 
-                <div className="d-flex justify-content-between mt-3">
-                    <p className="text-white pb-3">
+                <div className="footer-wrapper">
+                    <p className="footer-text">
                         <span className="material-icons">copyright</span>
                         <span className="vertical-super ms-1">ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com</span>    
                     </p>
