@@ -5,10 +5,11 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import Main from './Main';
-import Dashboard from './pages/Dashboard';
+import Layout from './pages/Layout';
 import LivePairs from './pages/LivePairs';
 import PairExplorer from './pages/PairExplorer';
 
@@ -19,15 +20,13 @@ function App() {
         <Route exact path="/">
           <Main />
         </Route>
-        <Route path="/dashboard">
-          <Dashboard />
-        </Route>
-        <Route path="/live-pairs">
+        <Route path='/dashboard' component={Layout} />
+        {/* <Route path="/live-pairs">
           <LivePairs />
         </Route>
         <Route path="/pair-explorer">
           <PairExplorer />
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );

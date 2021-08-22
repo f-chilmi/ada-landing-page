@@ -29,16 +29,16 @@ export default function LivePairs() {
       return (
         <div className="d-flex justify-content-between">
           <div className="icon-wrapper-table ">
-            <img src="assets/icons/babydb.png" alt="icon" />
+            <img src="/assets/icons/babydb.png" alt="icon" />
           </div>
           <div className="icon-wrapper-table mx-2">
-            <img src="assets/icons/bscscan.png" alt="icon" />
+            <img src="/assets/icons/bscscan.png" alt="icon" />
           </div>
           <div className="icon-wrapper-table me-2">
-            <img src="assets/icons/uniswap.png" alt="icon" />
+            <img src="/assets/icons/uniswap.png" alt="icon" />
           </div>
           <div className="icon-wrapper-table">
-            <img src="assets/icons/32.svg" alt="icon" />
+            <img src="/assets/icons/32.svg" alt="icon" />
           </div>
         </div>
       )
@@ -54,16 +54,16 @@ export default function LivePairs() {
       return (
         <div className="d-flex justify-content-between">
           <div className="icon-wrapper-table ">
-            <img src="assets/icons/21.svg" alt="icon" />
+            <img src="/assets/icons/21.svg" alt="icon" />
           </div>
           <div className="icon-wrapper-table mx-2">
-            <img src="assets/icons/20.svg" alt="icon" />
+            <img src="/assets/icons/20.svg" alt="icon" />
           </div>
           <div className="icon-wrapper-table me-2">
-            <img src="assets/icons/19.svg" alt="icon" />
+            <img src="/assets/icons/19.svg" alt="icon" />
           </div>
           <div className="icon-wrapper-table">
-            <img src="assets/icons/18.svg" alt="icon" />
+            <img src="/assets/icons/18.svg" alt="icon" />
           </div>
         </div>
       )
@@ -465,166 +465,33 @@ export default function LivePairs() {
   
   
   return (
-    <>
-      {/* head  */}
-      <div className="top-h d-flex">
-        <div className="brand">
-          <img src="/assets/logo_gram.png" alt="logo" />
+    <div className="body-body">
+
+      <div className="container">
+        <div className="d-flex justify-content-between align-items-center pt-4">
+          <h6 className="text-white">PANCAKESWAP POOL TOOLS {'>'} 
+            <span className="text-blue ">
+              LIVE NEW PAIRS
+            </span>
+          </h6>
+          <div className="search-wrapper position-relative">
+            <input type="text" className="form-control input-dark " placeholder="Filter by token" />
+            <i className="material-icons">search</i>
+          </div>
         </div>
-        <div className="icon-cam centering-element">
-          <i className="material-icons">photo_camera</i>
-        </div>
+        <p className="text-grey pb-5">Search for live new pairs and pool updates</p>
+
+        <BootstrapTable 
+          keyField='id' 
+          data={ data } 
+          columns={ columns } 
+          bordered={ false }
+        />
+
+        <div style={{ height: 100, width: "100%" }} />
+
       </div>
+    </div>
 
-      {/* body  */}
-      <div className="d-flex">
-
-        {/* left tabs */}
-        <div className="left-tabs">
-          <div className="tab-menu centering-element text-white">
-            <img src="/assets/icons/10.svg" alt="icons" />
-          </div>
-
-          <div className="empty-space" />
-
-          <div className="tab-menu t-selected centering-element">
-            <img src="/assets/icons/11.svg" alt="icons" />
-          </div>
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/12.svg" alt="icons" />
-          </div>
-
-          <div className="empty-space" />
-
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/13.svg" alt="icons" />
-          </div>
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/14.svg" alt="icons" />
-          </div>
-
-          <div className="empty-space" />
-
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/15.svg" alt="icons" />
-          </div>
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/16.svg" alt="icons" />
-          </div>
-
-          <div className="empty-space" />
-
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/17.svg" alt="icons" />
-          </div>
-
-          <div className="empty-space" />
-          
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/15.svg" alt="icons" />
-          </div>
-          <div className="tab-menu centering-element">
-            <img src="/assets/icons/16.svg" alt="icons" />
-          </div>
-
-        </div>
-      
-        {/* right body  */}
-        <div className="right-body">
-          
-          <div className="top-small">
-            <div className="container h-100 d-flex align-items-center justify-content-between">
-              <div className="h-100 contering-element">
-                <span className="text-white vertical-middle">BNB: </span>
-                <span className="text-blue vertical-middle">$2613.62 </span>
-              </div>
-              <div className="mid-block fw-bolder px-2">
-                <div className="text-grey">HOT PAIRS: </div>
-                <div className="text-white ms-auto">
-                  <span className="mx-2">
-                    <span className="text-blue">#1</span>
-                    <span>STARL</span>
-                  </span>
-                  <span className="mx-2">#2 BANKETH </span>
-                  <span className="mx-2">#3 FLOKI </span>
-                  <span className="mx-2">#4 PRXY </span>
-                  <span className="mx-2">#5 SAITAMA </span>
-                  <span className="mx-2">#6 TES </span>
-                </div>
-              </div>
-              <div className="d-flex">
-                <div className="d-flex justify-content-center align-items-center text-white fw-bolder">
-                  <div className="icon-wrapper-top me-2">
-                    <img src="assets/icons/babydb.png" alt="icon" />
-                  </div>
-                  <span className="">BABYDB</span>
-                </div>
-                <button className="live-trading-button ms-3">
-                  <i className="material-icons">fiber_manual_record</i>
-                  <span className="">Live Trading</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="body-body">
-
-            <div className="container">
-              <div className="d-flex justify-content-between align-items-center pt-4">
-                <h6 className="text-white">PANCAKESWAP POOL TOOLS {'>'} 
-                  <span className="text-blue ">
-                    LIVE NEW PAIRS
-                  </span>
-                </h6>
-                <div className="search-wrapper position-relative">
-                  <input type="text" className="form-control input-dark " placeholder="Filter by token" />
-                  <i className="material-icons">search</i>
-                </div>
-              </div>
-              <p className="text-grey pb-5">Search for live new pairs and pool updates</p>
-
-              <BootstrapTable 
-                keyField='id' 
-                data={ data } 
-                columns={ columns } 
-                bordered={ false }
-              />
-
-              <div style={{ height: 100, width: "100%" }} />
-
-            </div>
-          </div>
-
-
-          {/* footer  */}
-          <div className=" " style={{ backgroundColor: '#160b2c' }}>
-            <div className="container">
-              <div className="d-flex justify-content-between ">
-                <p className="text-white pb-3">
-                  <span className="material-icons">copyright</span>
-                  <span className="vertical-super ms-1">ADA Tools 2021 - info@adatools.com | Ads & Marketing: marketing@adatools.com</span>    
-                </p>
-
-                <div className="soc-icon ">
-                  <div className="icon-wrapper-soc me-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                  </div>
-                  <div className="icon-wrapper-soc mx-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                  </div>
-                  <div className="icon-wrapper-soc ms-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
-                  </div>
-                </div>  
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-      
-    
-    </>
-  );
+   );
 }

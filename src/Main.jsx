@@ -3,6 +3,9 @@ import { Container, Nav, Navbar, Button, Row, Col, Card } from 'react-bootstrap'
 
 
 export default function Main() {
+    const goToDashboard = () => {
+        window.location.href = '/dashboard'
+    }
     return (
         <>
         <div className="bg-purple pt-3">
@@ -22,11 +25,11 @@ export default function Main() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
                   <Nav >
-                    <Nav.Link href="#home" className="text-white mx-1 fw-bolder">App ADA Tools</Nav.Link>
+                    <Nav.Link href="#home" className="text-white mx-1 fw-bolder" onClick={goToDashboard}>App ADA Tools</Nav.Link>
                     <Nav.Link href="#features" className="text-white mx-1 fw-bolder">Manifesto</Nav.Link>
                     <Nav.Link href="#pricing" className="text-white mx-1 fw-bolder">ADAT Token</Nav.Link>
                     <Nav.Link href="#pricing" className="text-white mx-1 fw-bolder">Contact</Nav.Link>
-                    <Button className="button-blue mx-1 fw-bolder">Launch App</Button>
+                    <Button className="button-blue mx-1 fw-bolder" onClick={goToDashboard}>Launch App</Button>
                   </Nav>
                 </Navbar.Collapse>
               </Container>
@@ -44,7 +47,7 @@ export default function Main() {
               <p className="mb-4">
                 Create unique trading strategies, anticipate market movements, search for big spreads, track and copy the most profitable wallets and much more.
               </p>
-              <Button className="button-blue mx-1 fw-bolder">Launch App</Button>
+              <Button className="button-blue mx-1 fw-bolder" onClick={goToDashboard}>Launch App</Button>
             </div>
             <div className="right-side">
               <img

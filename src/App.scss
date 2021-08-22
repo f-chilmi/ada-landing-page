@@ -1,5 +1,5 @@
 
-@media (max-width: 575px) { 
+@media (max-width: 767px) { 
     .big-text {
         color: white;
         font-size: 25px;
@@ -181,15 +181,15 @@
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
+// @media (min-width: 576px) { 
       
-}
+// }
 
 // // Medium devices (tablets, 768px and up)
 // @media (min-width: 768px) { ... }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
+@media (min-width: 768px) { 
     .big-text {
         color: white;
         font-size: 50px;
@@ -246,6 +246,9 @@
         .bg1 {
             position: absolute;
             z-index: 1;
+            img {
+                max-width: 100vw;
+            }
         }
         .user-plan-wrap-2 {
             position: relative;
@@ -322,6 +325,9 @@
         .bg2 {
             position: absolute;
             z-index: 1;
+            img {
+                max-width: 100vw;
+            }
         }
         .roadmap-wrap-2 {
             position: relative;
