@@ -58,6 +58,15 @@ body {
     }
   }
 
+  .dropdown-btn {
+    background-color: #030207;
+    border: none;
+  }
+
+  .con-left {
+    max-width: 70%;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -83,7 +92,7 @@ body {
   .user-card-wrapper {
     .col-md-6 {
       p {
-        margin-top: 3rem;
+        margin-top: 1.5rem;
       }
       .card {
         &.left {
@@ -96,6 +105,11 @@ body {
         }
       }
     }
+  }
+
+  .dropdown-btn {
+    background-color: #030207;
+    border: none;
   }
 
 }

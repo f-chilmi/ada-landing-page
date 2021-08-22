@@ -5,6 +5,7 @@ import LivePairs from './LivePairs'
 import Multiswap from './Multiswap'
 import UserAccount from './UserAccount'
 import PairExplorer from './PairExplorer'
+import Configuration from './Configuration'
 
 export default function Layout() {
 
@@ -39,7 +40,7 @@ export default function Layout() {
     },
     {
       name: "configuration",
-      main: () => <PairExplorer />
+      main: () => <Configuration />
     }
   ]
   console.log("pathname", pathname, useLocation())
