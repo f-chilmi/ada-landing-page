@@ -37,6 +37,27 @@ body {
       height: 60%;
     }
   }
+
+  .user-card-wrapper {
+    .col-md-6 {
+      p {
+        text-align: center;
+      }
+      .card {
+        &.left {
+          margin: auto;
+          width: 80%;
+          margin-bottom: 3rem;
+        }
+        &.right {
+          width: 80%;
+          margin: auto;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -58,6 +79,25 @@ body {
       height: 60%;
     }
   }
+
+  .user-card-wrapper {
+    .col-md-6 {
+      p {
+        margin-top: 3rem;
+      }
+      .card {
+        &.left {
+          width: 80%;
+          margin-left: auto;
+        }
+        &.right {
+          width: 80%;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
 }
 
 .top-h {
@@ -325,6 +365,7 @@ body {
 
 .body-body {
   background-color: #160b2c;
+  min-height: 70vh;
 }
 
 .vertical-middle {

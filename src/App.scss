@@ -418,6 +418,18 @@
     }
 }
 
+.button-dark {
+    background-color: #030207;
+    color: grey;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    &:hover {
+        background-color: #2eafa2;
+    }
+}
+
 .h-100px {
     height: 100px;
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, useRouteMatch, useLocation, Switch } fro
 import Dashboard from './Dashboard'
 import LivePairs from './LivePairs'
 import Multiswap from './Multiswap'
+import UserAccount from './UserAccount'
 import PairExplorer from './PairExplorer'
 
 export default function Layout() {
@@ -34,7 +35,7 @@ export default function Layout() {
     },
     {
       name: "user",
-      main: () => <PairExplorer />
+      main: () => <UserAccount />
     },
     {
       name: "configuration",
