@@ -11,6 +11,19 @@ body {
 
 @media (max-width: 767px) {
 
+  .brand {
+    background-color: #46297c;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative !important;
+    img {
+      height: 40%;
+    }
+  }
+
   .top-search-title {
     display: flex;
     flex-direction: column-reverse;
@@ -112,22 +125,28 @@ body {
     border: none;
   }
 
+  .con-left {
+    max-width: 70%;
+  }
+
+}
+
+.brand {
+  background-color: #46297c;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 40%;
+  }
 }
 
 .top-h {
   height: 70px;
   position: relative;
-  .brand {
-    background-color: #46297c;
-    height: 100%;
-    width: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      height: 40%;
-    }
-  }
+  
 }
 
 .centering-element {
@@ -144,6 +163,28 @@ body {
   background-color: #46297c;
   width: 70px;
   // height: calc(100vh - 70px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  // width: 200px;
+  height: 100%;
+  z-index: 99;
+}
+
+.left-tabs-hidden {
+  background-color: #46297c;
+  width: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-hidden {
+  display: none;
+  background-color: #110822;
 }
 
 .t-selected {
@@ -174,7 +215,10 @@ body {
 }
 
 .right-body {
-  flex: 1
+  flex: 1;
+  &.desktop {
+    padding-left: 70px;
+  }
 }
 
 .text-blue {

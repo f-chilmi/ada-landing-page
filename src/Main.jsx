@@ -472,7 +472,7 @@ export default function Main() {
                 </div>
                 <div className="adat-right" style={{ height: ' 90%' }} >
                     <Card className="shadow h-100">
-                        <img className="h-100" src="/assets/adat_token.png" alt="image"  />
+                        <img className="h-100" src="/assets/adat_token.png" alt="token"  />
                     </Card>
                 </div>
             </div>
