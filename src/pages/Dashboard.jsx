@@ -3,9 +3,9 @@ import React from 'react'
 
 export default function Dashboard() {
   return (
-    <div className="row bg-purple-dark pt-4 px-4 row-no-padding ">
+    <div className="row pt-4 px-4 row-no-padding ">
 
-      <div className="col-4 ">
+      <div className="col-md-4 col-sm-12 ">
 
         <div className="card card-dark p-3 mb-4">
           <div className="card-head ">
@@ -34,7 +34,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="card card-dark p-3">
+        <div className="card card-dark p-3 mb-4">
           <div className="card-head ">
             <div className="icon-wrapper-white me-3">
               <img src="/assets/logo_gram_dark.png" alt="icon" />
@@ -64,8 +64,8 @@ export default function Dashboard() {
 
       </div>
 
-      <div className="col-4">
-        <div className="card card-dark p-3">
+      <div className="col-md-4 col-sm-12 mb-4">
+        <div className="card card-dark p-3 mb-4">
           <div className="card-head w-100">
             <div className="centering-element w-100">
               <div>HOT</div>
@@ -205,7 +205,7 @@ export default function Dashboard() {
 
       </div>
 
-      <div className="col-4">
+      <div className="col-md-4 col-sm-12 mb-4">
         <div className="card card-dark p-3">
           <div className="card-head w-100">
             <div className="centering-element w-100">

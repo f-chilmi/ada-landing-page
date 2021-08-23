@@ -4,40 +4,38 @@ import { Link, useLocation } from 'react-router-dom'
 export default function LeftTab(props) {
 
   // const sidebarCollapsed = localStorage.getItem('sidebar-collapsed')
-  const [isExpanded, setIsExpanded] = React.useState(false)
+  // const [isExpanded, setIsExpanded] = React.useState(false)
 
-  React.useEffect(() => {
-    if (!props.isMobile) {
-      setIsExpanded(true)
-    }
-  }, [props])
+  // React.useEffect(() => {
+  //   if (!props.isMobile) {
+  //     setIsExpanded(true)
+  //   }
+  // }, [props])
 
   const { pathname } = useLocation()
   const menu = pathname.slice(11)
 
-  const handleToggler = () => {
-    if (isExpanded) {
-      setIsExpanded(false)
-      localStorage.setItem('sidebar-collapsed', true)
-      return;
-    }
-    setIsExpanded(true)
-    localStorage.removeItem('sidebar-collapse')
-  }
+  // const handleToggler = () => {
+  //   if (isExpanded) {
+  //     setIsExpanded(false)
+  //     localStorage.setItem('sidebar-collapsed', true)
+  //     return;
+  //   }
+  //   setIsExpanded(true)
+  //   localStorage.removeItem('sidebar-collapse')
+  // }
 
   const goToLandingPage = () => {
     window.location.href="/"
   }
 
   return (
-    <div className={props.isMobile ? (isExpanded ? 'left-tabs' : 'left-tabs-hidden') : ('left-tabs')} >
-
-      <div className="brand">
-        {props.isMobile && ( <i className="material-icons text-white pointer" onClick={handleToggler} style={{ fontSize: 30 }} >menu</i> ) }
-        {!props.isMobile && (<img src="/assets/logo_gram.png" alt="logo" className="pointer" onClick={goToLandingPage} />)}
+    <div className='left-tabs' >
+      <div className="brand-head" >
+        <img src="/assets/logo_gram.png" alt="logo" onClick={goToLandingPage} />
       </div>
-          
-      <div className={isExpanded ? '' : 'sidebar-hidden'} >
+
+      <div  >
         <div className={menu === 'main' ? "t-selected centering-element text-white" : "tab-menu centering-element"}>
           <Link to="main">
             <img src="/assets/icons/10.svg" alt="icons" />

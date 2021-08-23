@@ -5,15 +5,20 @@ import { Dropdown } from 'react-bootstrap'
 export default function Configuration() {
 
   const [pairMove, setPairMove] = React.useState(false)
-  const handleChange = () => {
+  const [notif, setNotif] = React.useState(false)
+
+  const handleChangeMove = () => {
     setPairMove(!pairMove)
+  }
+  const handleChangeNotif = () => {
+    setNotif(!notif)
   }
 
   return (
     <div className="body-body pb-5">
 
       <div className="container">
-        <div className="top-search-title ">
+        <div className="top-search-title pt-4">
           <div className="text-white">
             <h6>OTHERS {'>'}
               <span className="text-blue ">
@@ -42,12 +47,12 @@ export default function Configuration() {
                     </div>
                     <div className="con-right">
                       <Switch 
-                        onChange={handleChange} 
+                        onChange={handleChangeMove} 
                         checked={pairMove} 
                         uncheckedIcon={false}
                         checkedIcon={false}
                         onColor="#86d3ff"
-                        onHandleColor="#2693e6"
+                        onHandleColor="#030207"
                         height={20}
                         width={40}
                       />
@@ -61,8 +66,8 @@ export default function Configuration() {
                     </div>
                     <div className="con-right">
                       <Switch 
-                        onChange={handleChange} 
-                        checked={pairMove} 
+                        onChange={handleChangeNotif} 
+                        checked={notif} 
                         uncheckedIcon={false}
                         checkedIcon={false}
                         onColor="#86d3ff"

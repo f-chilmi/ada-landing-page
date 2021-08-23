@@ -27,15 +27,15 @@ export default function Layout() {
   }
   const isMobile = (width <= 768);
 
-  let classRight = isMobile ? 'right-body' : 'right-body desktop'
+  let classRight = isMobile ? 'right-body bg-160b2c' : 'right-body desktop bg-160b2c'
 
   return (
     <Router>
       {/* head */}
-      <Head />
+      <Head isMobile={isMobile} />
 
       {/* body  */}
-      <div className="d-flex">
+      <div className="d-flex position-relative h-100">
 
         <LeftTab isMobile={isMobile} />
 
@@ -45,7 +45,7 @@ export default function Layout() {
           <div className="top-small">
             <div className="container d-flex justify-content-between">
               <div>icon</div>
-              <div className="ms-auto">
+              <div className={isMobile ? "d-none" :  "ms-auto"}>
                 <span className="text-white">Next ADATShare: </span>
                 <span className="text-blue">2021-09-01 - 1,252,964 ADAT </span>
                 <span className="text-white">| Next Token Burn: </span>

@@ -41,7 +41,7 @@ export default function Body() {
   ]
 
   return (
-    <div>
+    <div >
       <Route path={'/dashboard/:menu'} >
         {url.map(i => {
           if (i.name === menu) {

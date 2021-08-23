@@ -5,7 +5,7 @@ export default function UserAccount() {
     <div className="body-body pb-5">
 
       <div className="container">
-        <div className="top-search-title ">
+        <div className="top-search-title pt-4">
           <div className="text-white">
             <h6>OTHERS {'>'}
               <span className="text-blue ">

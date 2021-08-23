@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Head() {
+export default function Head(props) {
   return (
     <div className="top-h d-flex">
-      {/* <div className="brand">
+      {/* <div className={props.isMobile ? "brand-head" : "d-none"}>
         <img src="/assets/logo_gram.png" alt="logo" />
       </div> */}
       <div className="icon-cam centering-element">
