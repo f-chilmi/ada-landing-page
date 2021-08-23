@@ -60,6 +60,7 @@ export default function PairExplorer() {
       headerClasses: 'border-dark-purple text-center',
     },
     {
+      dataField: 'id',
       text: 'Others',
       headerClasses: 'border-dark-purple',
       classes: 'border-dark-purple',
@@ -88,6 +89,7 @@ export default function PairExplorer() {
 
   const data = [
     {
+      id: 1,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -97,6 +99,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 2,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -106,6 +109,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 3,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -115,6 +119,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 4,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -124,6 +129,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 5,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -133,6 +139,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 6,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -142,6 +149,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 7,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -151,6 +159,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 8,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -160,6 +169,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 9,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -169,6 +179,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 10,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -178,6 +189,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 11,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -187,6 +199,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 12,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -196,6 +209,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 13,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -205,6 +219,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 14,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -214,6 +229,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 15,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -223,6 +239,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 16,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -232,6 +249,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 17,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -241,6 +259,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 18,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -250,6 +269,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 19,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -259,6 +279,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 20,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -268,6 +289,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 21,
       date: '2021-08-04 19:55:00',
       type: 'Buy',
       priceUSD: '$0.28029358',
@@ -277,6 +299,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 22,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',
@@ -286,6 +309,7 @@ export default function PairExplorer() {
       maker: '0xske374...6631'
     },
     {
+      id: 23,
       date: '2021-08-04 19:55:00',
       type: 'Sell',
       priceUSD: '$0.28029358',

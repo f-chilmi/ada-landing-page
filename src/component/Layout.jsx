@@ -27,6 +27,8 @@ export default function Layout() {
   }
   const isMobile = (width <= 768);
 
+  let classRight = isMobile ? 'right-body' : 'right-body desktop'
+
   return (
     <Router>
       {/* head */}
@@ -38,7 +40,7 @@ export default function Layout() {
         <LeftTab isMobile={isMobile} />
 
         {/* right body  */}
-        <div className="right-body" className={ isMobile ? 'right-body' : 'right-body desktop' }>
+        <div className={`${classRight}`}>
           
           <div className="top-small">
             <div className="container d-flex justify-content-between">

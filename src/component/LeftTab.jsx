@@ -10,9 +10,8 @@ export default function LeftTab(props) {
     if (!props.isMobile) {
       setIsExpanded(true)
     }
-  }, [])
+  }, [props])
 
-  const path = "/dashboard"
   const { pathname } = useLocation()
   const menu = pathname.slice(11)
 
@@ -26,17 +25,21 @@ export default function LeftTab(props) {
     localStorage.removeItem('sidebar-collapse')
   }
 
+  const goToLandingPage = () => {
+    window.location.href="/"
+  }
+
   return (
     <div className={props.isMobile ? (isExpanded ? 'left-tabs' : 'left-tabs-hidden') : ('left-tabs')} >
 
       <div className="brand">
         {props.isMobile && ( <i className="material-icons text-white pointer" onClick={handleToggler} style={{ fontSize: 30 }} >menu</i> ) }
-        {!props.isMobile && (<img src="/assets/logo_gram.png" alt="logo" onClick={() => window.location.href="/"} />)}
+        {!props.isMobile && (<img src="/assets/logo_gram.png" alt="logo" className="pointer" onClick={goToLandingPage} />)}
       </div>
           
       <div className={isExpanded ? '' : 'sidebar-hidden'} >
         <div className={menu === 'main' ? "t-selected centering-element text-white" : "tab-menu centering-element"}>
-          <Link to={`${path}/main`}>
+          <Link to="main">
             <img src="/assets/icons/10.svg" alt="icons" />
           </Link>
         </div>
@@ -44,7 +47,7 @@ export default function LeftTab(props) {
 
         <div className="empty-space" />
 
-        <Link to={`${path}/live-pair`}>
+        <Link to="live-pair">
           <div className={menu === 'live-pair' ? "t-selected centering-element text-white" : "tab-menu centering-element"}>
             <img src="/assets/icons/11.svg" alt="icons" />
           </div>
@@ -62,7 +65,7 @@ export default function LeftTab(props) {
             <img src="/assets/icons/13.svg" alt="icons" />
           </div>
         </Link>
-        <Link>
+        <Link to="multiswap">
           <div className="tab-menu centering-element">
             <img src="/assets/icons/14.svg" alt="icons" />
           </div>
