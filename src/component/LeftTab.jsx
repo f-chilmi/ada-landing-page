@@ -30,9 +30,9 @@ export default function LeftTab(props) {
   }
 
   return (
-    <div className='left-tabs' >
-      <div className="brand-head" >
-        <img src="/assets/logo_gram.png" alt="logo" onClick={goToLandingPage} />
+    <div className='left-tabs' onClick={goToLandingPage}>
+      <div className="brand-head pointer" >
+        <img src="/assets/logo_gram.png" alt="logo"  />
       </div>
 
       <div  >
