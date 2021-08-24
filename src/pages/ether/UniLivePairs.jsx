@@ -2,7 +2,7 @@ import React from 'react'
 import BootstrapTable from 'react-bootstrap-table-next';
 
 
-export default function LivePairs() {
+export default function UniLivePairs() {
   const columns = [
   {
     dataField: 'token',
@@ -503,7 +503,7 @@ export default function LivePairs() {
 
       <div className="container">
         <div className="d-flex justify-content-between align-items-center pt-4">
-          <h6 className="text-white">PANCAKESWAP POOL TOOLS {'>'} 
+          <h6 className="text-white">UNISWAP POOL TOOLS {'>'} 
             <span className="text-blue ">
               LIVE NEW PAIRS
             </span>

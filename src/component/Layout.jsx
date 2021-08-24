@@ -10,6 +10,7 @@ export default function Layout() {
   const { pathname } = useLocation()
 
   const [width, setWidth] = React.useState(window.screen.availWidth)
+  const [tabTopSelected, setTabTopSelected] = React.useState('bsc')
 
   if (pathname === "/dashboard") {
     window.location.href = '/dashboard/main'
@@ -37,14 +38,36 @@ export default function Layout() {
       {/* body  */}
       <div className="d-flex position-relative h-100">
 
-        <LeftTab isMobile={isMobile} />
+        <LeftTab isMobile={isMobile} tabTopSelected={tabTopSelected} setTabTopSelected={(val) => setTabTopSelected(val)} />
 
         {/* right body  */}
         <div className={`${classRight}`}>
           
           <div className="top-small">
             <div className="container d-flex justify-content-between">
-              <div>icon</div>
+              <div className="d-flex text-white">
+                <div 
+                  className={tabTopSelected === 'ether' ? "me-3 tab-top-selected" : "me-3 pointer"}
+                  onClick={tabTopSelected !== 'ether' ? () => setTabTopSelected('ether'): null}
+                >
+                  <img src="/assets/icons/ether.svg" alt="ether" className="logo-ether" />
+                  <p className="d-inline ms-1">Ether</p>
+                </div>
+                <div 
+                  className={tabTopSelected === 'bsc' ? "me-3 tab-top-selected" : "me-3 pointer"}
+                  onClick={tabTopSelected !== 'bsc' ? () => setTabTopSelected('bsc'): null}
+                >
+                  <img src="/assets/icons/bsc.png" alt="bsc" className="logo-ether" />
+                  <p className="d-inline ms-1">BSC</p>
+                </div>
+                <div 
+                  className={tabTopSelected === 'polygon' ? "me-3 tab-top-selected" : "me-3 pointer"}
+                  onClick={tabTopSelected !== 'polygon' ? () => setTabTopSelected('polygon'): null}
+                >
+                  <img src="/assets/icons/polygon.png" alt="polygon" className="logo-ether" />
+                  <p className="d-inline ms-1">Polygon</p>
+                </div>
+              </div>
               <div className={isMobile ? "d-none" :  "ms-auto"}>
                 <span className="text-white">Next ADATShare: </span>
                 <span className="text-blue">2021-09-01 - 1,252,964 ADAT </span>
@@ -54,7 +77,7 @@ export default function Layout() {
             </div>
           </div>
 
-          <Body />
+          <Body tabTopSelected={tabTopSelected} />
 
           <Footer />
           

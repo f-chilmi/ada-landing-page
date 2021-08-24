@@ -2,7 +2,7 @@ import React from 'react'
 import BootstrapTable from 'react-bootstrap-table-next';
 
 
-export default function PairExplorer() {
+export default function PairExplorerPoly() {
 
   const columns = [
     {
@@ -326,7 +326,7 @@ export default function PairExplorer() {
 
       <div className="container">
         <div className="d-flex justify-content-between align-items-center pt-4">
-          <h6 className="text-white">PANCAKESWAP SWAP {'>'} 
+          <h6 className="text-white">QUICKSWAP {'>'} 
             <span className="text-blue ">
               PAIR EXPLORER
             </span>

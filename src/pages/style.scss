@@ -125,6 +125,23 @@ body {
 }
 
 @media (min-width: 768px) {
+
+  .body-card {
+    width: 45%;
+  }
+
+  .logo-ether {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tab-top-selected {
+    background-color: #160b2c;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .top-search-title {
     display: flex;
     justify-content: space-between;
@@ -141,13 +158,26 @@ body {
   .brand-head {
     background-color: #46297c;
     height: 70px;
-    width: 70px;
+    // width: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative !important;
     img {
       height: 40%;
+    }
+  }
+
+  .t-selected {
+    background-color: aqua;
+    height: 35px;
+    display: flex;
+    justify-content: start;
+    padding-left: 1.5rem;
+    align-items: center;
+    img {
+      height: 60%;
+      margin-right: 1.75rem;
     }
   }
 
@@ -159,16 +189,52 @@ body {
     top: -70px;
     left: 0;
     bottom: 0;
-    // display: flex;
-    // flex-direction: column;
-    // width: 200px;
     z-index: 99;
+    transition: width .2s;
+    a {
+      text-decoration: none !important;
+    }
+    .empty-space-text {
+      display: none;
+    }
+    &:hover {
+      width: 200px;
+      .text-menu {
+        display: block;
+        text-decoration: none;
+        color: white;
+      }
+      .logo-only {
+        display: none;
+      }
+      .logo-with-text {
+        display: block;
+      }
+      .empty-space-text {
+        font-weight: 700;
+        padding-left: 1.5rem;
+        padding-top: .5rem;
+        color: white;
+        display: block;
+      }
+    }
+    .logo-with-text {
+      display: none;
+    }
+    .text-menu {
+      display: none;
+    }
   }
 
   .tab-menu {
     height: 35px;
+    display: flex;
+    justify-content: start;
+    padding-left: 1.5rem;
+    align-items: center;
     img {
       height: 60%;
+      margin-right: 1.75rem;
     }
   }
 

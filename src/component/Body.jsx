@@ -1,22 +1,29 @@
 import React from 'react'
 import { Route, useLocation } from 'react-router-dom'
-import Dashboard from '../pages/Dashboard'
-import LivePairs from '../pages/LivePairs'
+import DashboardBsc from '../pages/bsc/DashboardBsc'
+import LivePairs from '../pages/bsc/LivePairsBsc'
 import Multiswap from '../pages/Multiswap'
 import UserAccount from '../pages/UserAccount'
-import PairExplorer from '../pages/PairExplorer'
+import PairExplorer from '../pages/bsc/PairExplorerBsc'
 import Configuration from '../pages/Configuration'
+import DashboardEther from '../pages/ether/DashboardEther'
+import DashboardPolygon from '../pages/polygon/DashboardPolygon'
 
 
-export default function Body() {
+export default function Body(props) {
 
   const { pathname } = useLocation()
   const menu = pathname.slice(11)
+  console.log("props", props)
 
   const url = [
     {
       name: "main",
-      main: () => <Dashboard />
+      main: () => {
+        if (props.tabTopSelected === 'bsc') return <DashboardBsc />
+        if (props.tabTopSelected === 'ether') return <DashboardEther />
+        if (props.tabTopSelected === 'polygon') return <DashboardPolygon />
+      }
     },
     {
       name: "live-pair",
