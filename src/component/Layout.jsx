@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, useLocation, useRouteMatch, Route, useParams } from 'react-router-dom'
 import Head from './Head'
 import LeftTab from './LeftTab'
 import Footer from './Footer'
@@ -8,20 +8,31 @@ import Body from './Body'
 export default function Layout() {
 
   const { pathname } = useLocation()
+  const { parent } = useParams()
 
   const [width, setWidth] = React.useState(window.screen.availWidth)
-  const [tabTopSelected, setTabTopSelected] = React.useState('bsc')
+  const [expanded, setExpanded] = React.useState(false)
 
-  if (pathname === "/dashboard") {
-    window.location.href = '/dashboard/main'
+  console.log("pathname", pathname, useRouteMatch(), parent)
+
+  if (pathname === "/app") {
+    window.location.href = '/app/bsc'
   }
 
   React.useEffect(() => {
+    // window.addEventListener("scroll", (event) => {
+    //   if (window?.scrollY > 70) setButtonVisible(true) 
+    //   if (window?.scrollY < 70) setButtonVisible(false)
+    // });
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
     }
   }, [])
+
+  React.useEffect(() => {
+    console.log("route changed", parent)
+  }, [parent])
 
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
@@ -38,7 +49,15 @@ export default function Layout() {
       {/* body  */}
       <div className="d-flex position-relative h-100">
 
-        <LeftTab isMobile={isMobile} tabTopSelected={tabTopSelected} setTabTopSelected={(val) => setTabTopSelected(val)} />
+        <button className="button-expand-mobile" onClick={()=>setExpanded(!expanded)}>
+          <i className="material-icons">
+            menu
+          </i>
+        </button>
+
+        <Route exact path='/app/:parent/:child' >
+          <LeftTab isMobile={isMobile} expanded={expanded} setExpanded={(val) => setExpanded(val)} />
+        </Route>
 
         {/* right body  */}
         <div className={`${classRight}`}>
@@ -47,22 +66,22 @@ export default function Layout() {
             <div className="container d-flex justify-content-between">
               <div className="d-flex text-white">
                 <div 
-                  className={tabTopSelected === 'ether' ? "me-3 tab-top-selected" : "me-3 pointer"}
-                  onClick={tabTopSelected !== 'ether' ? () => setTabTopSelected('ether'): null}
+                  className={parent === 'ether' ? "me-3 tab-top-selected" : "me-3 pointer"}
+                  onClick={parent !== 'ether' ? () => window.location.href="/app/ether/main": null}
                 >
                   <img src="/assets/icons/ether.svg" alt="ether" className="logo-ether" />
                   <p className="d-inline ms-1">Ether</p>
                 </div>
                 <div 
-                  className={tabTopSelected === 'bsc' ? "me-3 tab-top-selected" : "me-3 pointer"}
-                  onClick={tabTopSelected !== 'bsc' ? () => setTabTopSelected('bsc'): null}
+                  className={parent === 'bsc' ? "me-3 tab-top-selected" : "me-3 pointer"}
+                  onClick={parent !== 'bsc' ? () => window.location.href="/app/bsc/main": null}
                 >
                   <img src="/assets/icons/bsc.png" alt="bsc" className="logo-ether" />
                   <p className="d-inline ms-1">BSC</p>
                 </div>
                 <div 
-                  className={tabTopSelected === 'polygon' ? "me-3 tab-top-selected" : "me-3 pointer"}
-                  onClick={tabTopSelected !== 'polygon' ? () => setTabTopSelected('polygon'): null}
+                  className={parent === 'polygon' ? "me-3 tab-top-selected" : "me-3 pointer"}
+                  onClick={parent !== 'polygon' ? () => window.location.href="/app/polygon/main": null}
                 >
                   <img src="/assets/icons/polygon.png" alt="polygon" className="logo-ether" />
                   <p className="d-inline ms-1">Polygon</p>
@@ -77,7 +96,9 @@ export default function Layout() {
             </div>
           </div>
 
-          <Body tabTopSelected={tabTopSelected} />
+          <Route exact path='/app/:parent/:child' >
+            <Body /> 
+          </Route>
 
           <Footer />
           

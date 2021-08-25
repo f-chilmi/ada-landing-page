@@ -1,37 +1,95 @@
 import React from 'react'
-import { Route, useLocation } from 'react-router-dom'
+import { Route, useParams } from 'react-router-dom'
 import DashboardBsc from '../pages/bsc/DashboardBsc'
-import LivePairs from '../pages/bsc/LivePairsBsc'
+import LivePairsBsc from '../pages/bsc/LivePairsBsc'
+import PairExplorerBsc from '../pages/bsc/PairExplorerBsc'
+
+import DashboardEther from '../pages/ether/DashboardEther'
+import UniLivePairs from '../pages/ether/UniLivePairs'
+import SushiLivePairs from '../pages/ether/SushiLivePairs'
+import UniPairExplorer from '../pages/ether/UniPairExplorer'
+import SushiPairExplorer from '../pages/ether/SushiPairExplorer'
+import UniBigSwap from '../pages/ether/UniBigSwap'
+import SushiBigSwap from '../pages/ether/SushiBigSwap'
+
+import DashboardPolygon from '../pages/polygon/DashboardPolygon'
+import LivePairsPoly from '../pages/polygon/LivePairsPoly'
+import PairExplorerPoly from '../pages/polygon/PairExplorerPoly'
+
 import Multiswap from '../pages/Multiswap'
 import UserAccount from '../pages/UserAccount'
-import PairExplorer from '../pages/bsc/PairExplorerBsc'
 import Configuration from '../pages/Configuration'
-import DashboardEther from '../pages/ether/DashboardEther'
-import DashboardPolygon from '../pages/polygon/DashboardPolygon'
 
 
-export default function Body(props) {
+export default function Body() {
 
-  const { pathname } = useLocation()
-  const menu = pathname.slice(11)
-  console.log("props", props)
+  const { parent, child } = useParams()
 
   const url = [
     {
       name: "main",
       main: () => {
-        if (props.tabTopSelected === 'bsc') return <DashboardBsc />
-        if (props.tabTopSelected === 'ether') return <DashboardEther />
-        if (props.tabTopSelected === 'polygon') return <DashboardPolygon />
+        switch (parent) {
+          case 'bsc':
+            return <DashboardBsc />
+          case 'ether':
+            return <DashboardEther />
+          case 'polygon':
+            return <DashboardPolygon />
+          default:
+            return
+        }
       }
     },
     {
       name: "live-pair",
-      main: () => <LivePairs />
+      main: () => {
+        switch (parent) {
+          case 'bsc':
+            return <LivePairsBsc />
+          case 'polygon':
+            return <LivePairsPoly />
+          default:
+            return
+        }
+      }
+    },
+    {
+      name: "uni-live-pair",
+      main: () => <UniLivePairs />
+    },
+    {
+      name: "sushi-live-pair",
+      main: () => <SushiLivePairs />
     },
     {
       name: "pair-explorer",
-      main: () => <PairExplorer />
+      main: () => {
+        switch (parent) {
+          case 'bsc':
+            return <PairExplorerBsc />
+          case 'polygon':
+            return <PairExplorerPoly />
+          default:
+            return
+        }
+      }
+    },
+    {
+      name: "uni-pair-explorer",
+      main: () => <UniPairExplorer />
+    },
+    {
+      name: "sushi-pair-explorer",
+      main: () => <SushiPairExplorer />
+    },
+    {
+      name: "uni-big-swap",
+      main: () => <UniBigSwap />
+    },
+    {
+      name: "sushi-big-swap",
+      main: () => <SushiBigSwap />
     },
     {
       name: "multiswap",
@@ -49,12 +107,14 @@ export default function Body(props) {
 
   return (
     <div >
-      <Route path={'/dashboard/:menu'} >
-        {url.map(i => {
-          if (i.name === menu) {
-            return <i.main key={i.name} />
+      <Route path={'/app/:parent/:child'} >
+        {url.map((i, id) => {
+          if (i.name === child) {
+            return <i.main key={id} />
           }
-          return null
+          return (
+            <div key={id} className="h-100 w-100 centering-element"/>
+          )
         })}
       </Route>
     </div>

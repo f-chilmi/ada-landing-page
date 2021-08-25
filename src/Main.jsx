@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, Button, Row, Col, Card } from 'react-bootstrap'
 
 export default function Main() {
     const goToDashboard = () => {
-        window.location.href = '/dashboard'
+        window.location.href = '/app/bsc/main'
     }
     return (
         <>

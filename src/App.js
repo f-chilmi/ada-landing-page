@@ -17,7 +17,10 @@ function App() {
         <Route exact path="/">
           <Main />
         </Route>
-        <Route path='/dashboard' component={Layout} />
+        <Route path='/app/:parent/:child' component={Layout} />
+        <Route path='/bsc' component={Layout} />
+        <Route path='/ether' component={Layout} />
+        <Route path='/polygon' component={Layout} />
       </Switch>
     </Router>
   );

@@ -394,6 +394,13 @@
     background-color: lightgray;
 }
 
+body {
+    font-size: 13px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
 .h-100vh {
     height: 100vh;
 }
