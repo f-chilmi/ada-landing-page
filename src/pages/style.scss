@@ -226,7 +226,7 @@
 @media (min-width: 768px) {
 
   .body-card {
-    width: 45%;
+    // width: 45%;
   }
 
   .logo-ether {
@@ -334,6 +334,9 @@
     img {
       height: 60%;
       margin-right: 1.75rem;
+    }
+    &:hover {
+      background-color: #0dcaf0;
     }
   }
 

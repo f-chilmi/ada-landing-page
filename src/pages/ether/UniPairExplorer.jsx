@@ -494,7 +494,13 @@ export default function UniPairExplorer() {
 
           </div>
 
-          <div className="col-7"></div>
+          <div className="col-7">
+            <div className="card" style={{ border: '1px solid #1b0f23', borderRadius: 25, backgroundColor: '#1b0f23', marginTop: 30 }}>
+              <div className="card-body">
+                <img src="/assets/charts_img.png" alt="charts" style={{ border: 'none', width: '100%' }} />
+              </div>
+            </div>
+          </div>
 
         </div>
 
