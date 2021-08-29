@@ -493,13 +493,13 @@ export default function Main() {
 
                     <div className="soc-icon ">
                         <div className="icon-wrapper-soc me-2">
-                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                            <img src="/assets/icons/logo-telegram.png" alt="logo" />
                         </div>
                         <div className="icon-wrapper-soc mx-2">
-                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                            <img src="/assets/icons/logo-medium.png" alt="logo" />
                         </div>
                         <div className="icon-wrapper-soc ms-2">
-                            <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                            <img src="/assets/icons/logo-twitter.png" alt="logo" />
                         </div>
                     </div>  
                 </div>

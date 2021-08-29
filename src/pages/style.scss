@@ -2,6 +2,11 @@
   background-color: #160b2c;
 }
 
+.pair {
+  text-decoration: none !important;
+  color: white !important;
+}
+
 @media (max-width: 767px) {
 
   .button-expand-mobile {
@@ -87,27 +92,6 @@
     .empty-space-text {
       display: none;
     }
-    // &:hover {
-    //   width: 100vw;
-    //   .text-menu {
-    //     display: block;
-    //     text-decoration: none;
-    //     color: white;
-    //   }
-    //   .logo-only {
-    //     display: none;
-    //   }
-    //   .logo-with-text {
-    //     display: block;
-    //   }
-    //   .empty-space-text {
-    //     font-weight: 700;
-    //     padding-left: 1.5rem;
-    //     padding-top: .5rem;
-    //     color: white;
-    //     display: block;
-    //   }
-    // }
     .logo-with-text {
       display: block;
       margin: auto;
@@ -128,6 +112,7 @@
     justify-content: start;
     padding-left: 1.5rem;
     align-items: center;
+    cursor: pointer;
     img {
       height: 60%;
       margin-right: 1.75rem;
@@ -153,13 +138,6 @@
       margin-right: 1.75rem;
     }
   }
-
-  // .tab-menu {
-  //   height: 35px;
-  //   img {
-  //     height: 60%;
-  //   }
-  // }
 
   .right-body {
     flex: 1;
@@ -331,12 +309,25 @@
     justify-content: start;
     padding-left: 1.5rem;
     align-items: center;
+    cursor: pointer;
     img {
       height: 60%;
       margin-right: 1.75rem;
     }
     &:hover {
       background-color: #0dcaf0;
+    }
+  }
+
+  .tab-menu-not-hover {
+    height: 35px;
+    display: flex;
+    justify-content: start;
+    padding-left: 1.5rem;
+    align-items: center;
+    img {
+      height: 60%;
+      margin-right: 1.75rem;
     }
   }
 

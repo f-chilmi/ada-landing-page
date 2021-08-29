@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Dashboard() {
   return (
+    <>
     <div className="row pt-4 px-4 row-no-padding ">
 
       <div className="col-md-4 col-sm-12 ">
@@ -23,14 +25,15 @@ export default function Dashboard() {
               <input type="text" className="form-control input-dark " placeholder="Search pair" />
               <i className="material-icons" style={{ top: '20%' }}>search</i>
             </div>
-            <div className="pair mb-2">
+            <Link to="live-pair" className="pair mb-2 d-block">
               <img src="/assets/icons/11.svg" alt="icons" />
               <span className="ps-2 ">Live New Pairs</span>
-            </div>
-            <div className="pair ">
+            </Link>
+            <Link to="pair-explorer" className="pair mb-2 d-block">
               <img src="/assets/icons/12.svg" alt="icons" />
               <span className="ps-2">Pair Explorer</span>
-            </div>
+            </Link>
+            
           </div>
         </div>
 
@@ -46,15 +49,15 @@ export default function Dashboard() {
           </div>
           <hr />
           <div className="body-card">
-            <div className="pair mb-2">
+            <Link to="multiswap" className="pair mb-2 d-block">
               <img src="/assets/icons/13.svg" alt="icons" />
               <span className="ps-2 ">MultiSwap</span>
-            </div>
-            <div className="pair mb-2">
+            </Link>
+            <div className="pair mb-2 pointer">
               <img src="/assets/icons/01.svg" alt="icons" />
               <span className="ps-2">Wallet Information</span>
             </div>
-            <div className="pair ">
+            <div className="pair  pointer">
               <img src="/assets/icons/14.svg" alt="icons" />
               <span className="ps-2">New Pairs Bot</span>
             </div>
@@ -295,5 +298,66 @@ export default function Dashboard() {
 
     </div>
 
+    <div className="row pt-4 px-4 row-no-padding ">
+
+      <div className="col-md-4 col-sm-12 ">
+
+        <div className="card card-dark p-3 mb-4">
+          <div className="card-head ">
+            <div className="icon-wrapper-white me-3">
+              <img src="/assets/icons/babydb.png" alt="icon" />
+            </div>
+            <div className="centering-element">
+              <span className="fw-bolder"> BAKERYSWAP </span>
+              TOOLS
+            </div>
+          </div>
+          <hr />
+          <div className="body-card p-4">
+            <p className="text-center">Coming soon</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="col-md-4 col-sm-12 mb-4">
+        <div className="card card-dark p-3 mb-4">
+          <div className="card-head ">
+            <div className="icon-wrapper-white me-3">
+              <img src="/assets/icons/babydb.png" alt="icon" />
+            </div>
+            <div className="centering-element">
+              <span className="fw-bolder"> BAKERYSWAP </span>
+              TOOLS
+            </div>
+          </div>
+          <hr />
+          <div className="body-card p-4">
+            <p className="text-center">Coming soon</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-4 col-sm-12 mb-4">
+        <div className="card card-dark p-3 mb-4">
+          <div className="card-head ">
+            <div className="icon-wrapper-white me-3">
+              <img src="/assets/icons/babydb.png" alt="icon" />
+            </div>
+            <div className="centering-element">
+              <span className="fw-bolder"> BAKERYSWAP </span>
+              TOOLS
+            </div>
+          </div>
+          <hr />
+          <div className="body-card p-4">
+            <p className="text-center">Coming soon</p>
+          </div>
+        </div>  
+      </div>
+
+    </div>
+
+    </>
   );
 }

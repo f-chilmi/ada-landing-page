@@ -11,13 +11,13 @@ export default function Footer() {
           </p>
 
           <div className="soc-icon ">
-            <div className="icon-wrapper-soc me-2">
+            <div className="icon-wrapper-soc me-2 pointer">
               <img src="/assets/icons/logo-telegram.png" alt="logo" />
             </div>
-            <div className="icon-wrapper-soc mx-2">
+            <div className="icon-wrapper-soc mx-2 pointer">
               <img src="/assets/icons/logo-medium.png" alt="logo" />
             </div>
-            <div className="icon-wrapper-soc ms-2">
+            <div className="icon-wrapper-soc ms-2 pointer">
               <img src="/assets/icons/logo-twitter.png" alt="logo" />
             </div>
           </div>  

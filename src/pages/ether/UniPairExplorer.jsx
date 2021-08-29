@@ -2,7 +2,7 @@ import React from 'react'
 import BootstrapTable from 'react-bootstrap-table-next';
 
 
-export default function UniPairExplorer() {
+export default function SushiPairExplorer() {
 
   const columns = [
     {
@@ -332,12 +332,12 @@ export default function UniPairExplorer() {
             </span>
           </h6>
           <div className="search-wrapper">
-            <div className="refresh-div-search">
+            <div className="refresh-div-search pointer">
               <span className="material-icons refresh-icon">autorenew</span>
             </div>
             <div className="input-wrapper">
               <input type="text" className="form-control input-dark " placeholder="Search pair" />
-              <i className="material-icons">search</i>
+              <i className="material-icons pointer">search</i>
             </div>
           </div>
         </div>
@@ -348,8 +348,8 @@ export default function UniPairExplorer() {
 
             <div className="d-flex justify-content-end">
               <div className="icons-tab">
-                <i className="material-icons me-2">share</i>
-                <i className="material-icons">star</i>
+                <i className="material-icons me-2 pointer">share</i>
+                <i className="material-icons pointer">star</i>
               </div>
               <div className="trade-tab">TRADE</div>
             </div>
@@ -371,28 +371,28 @@ export default function UniPairExplorer() {
                   <div className="text-2">
                     <p className="text-white">Token contract: </p>
                     <p className="blue-color ms-2">0xfb7b45...c75a </p>
-                    <i className="material-icons blue-color">content_copy</i>
+                    <i className="material-icons blue-color pointer">content_copy</i>
                     <p className="text-white">- Pair</p>
-                    <i className="material-icons blue-color">content_copy</i>
+                    <i className="material-icons blue-color pointer">content_copy</i>
                   </div>
 
                   <hr />
 
                   <div className="d-flex justify-content-start">
-                    <div className="icon-wrapper-table me-2">
+                    <div className="icon-wrapper-table me-2 pointer">
                       <img src="/assets/icons/bscscan.png" alt="icon" />
                     </div>
-                    <div className="icon-wrapper-table mx-2">
+                    <div className="icon-wrapper-table mx-2 pointer">
                       <img src="/assets/icons/babydb.png" alt="icon" />
                     </div>
                     
-                    <div className="icon-wrapper-table mx-2">
+                    <div className="icon-wrapper-table mx-2 pointer">
                       <img src="/assets/icons/07.svg" alt="icon" />
                     </div>
-                    <div className="icon-wrapper-table mx-2">
+                    <div className="icon-wrapper-table mx-2 pointer">
                       <img src="/assets/icons/08.svg" alt="icon" />
                     </div>
-                    <div className="icon-wrapper-table mx-2">
+                    <div className="icon-wrapper-table mx-2 pointer">
                       <img src="/assets/icons/21.svg" alt="icon" />
                     </div>
                   </div>
@@ -483,7 +483,7 @@ export default function UniPairExplorer() {
                         <p className="fw-bolder mb-2">Diluted market cap:</p>
                         <p>$3,300,722,40</p>
                       </div>
-                      <div className="text-center color-aqua">View more info</div>
+                      <div className="text-center color-aqua pointer">View more info</div>
                     </div>
 
                   </div>
@@ -512,16 +512,16 @@ export default function UniPairExplorer() {
               <div className="card-body">
                 <p className="fw-bolder">Contract Details</p>
                 <div className="mt-2 d-flex justify-content-start">
-                <div className="icon-wrapper-table ">
+                <div className="icon-wrapper-table  pointer">
                   <img src="/assets/icons/21.svg" alt="icon" />
                 </div>
-                <div className="icon-wrapper-table mx-2">
+                <div className="icon-wrapper-table mx-2 pointer">
                   <img src="/assets/icons/20.svg" alt="icon" />
                 </div>
-                <div className="icon-wrapper-table me-2">
+                <div className="icon-wrapper-table me-2 pointer">
                   <img src="/assets/icons/19.svg" alt="icon" />
                 </div>
-                <div className="icon-wrapper-table">
+                <div className="icon-wrapper-table pointer">
                   <img src="/assets/icons/18.svg" alt="icon" />
                 </div>
               </div>
@@ -610,17 +610,17 @@ export default function UniPairExplorer() {
                     <i className="material-icons text-green">fiber_manual_record</i>
                   </div>
                 </div>
-                <div className="soc-icon">
-                  <div className="icon-wrapper-soc me-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                <div className="soc-icon mt-3 ">
+                  <div className="icon-wrapper-soc me-2 pointer">
+                    <img src="/assets/icons/logo-mail.png" alt="logo" />
                   </div>
-                  <div className="icon-wrapper-soc mx-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  <div className="icon-wrapper-soc mx-2 pointer">
+                    <img src="/assets/icons/logo-medium.png" alt="logo" />
                   </div>
-                  <div className="icon-wrapper-soc ms-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  <div className="icon-wrapper-soc ms-2 pointer">
+                    <img src="/assets/icons/logo-twitter.png" alt="logo" />
                   </div>
-                </div>
+                </div> 
                 <div className="mt-2">
                   Join ICO of the marketing platform made to promote blockchain
                 </div>
@@ -652,17 +652,17 @@ export default function UniPairExplorer() {
                 <div >
                   If you want your news to appear in this section, please contact us
                 </div>
-                <div className="soc-icon mt-3">
-                  <div className="icon-wrapper-soc me-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                <div className="soc-icon mt-3 ">
+                  <div className="icon-wrapper-soc me-2 pointer">
+                    <img src="/assets/icons/logo-mail.png" alt="logo" />
                   </div>
-                  <div className="icon-wrapper-soc mx-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  <div className="icon-wrapper-soc mx-2 pointer">
+                    <img src="/assets/icons/logo-medium.png" alt="logo" />
                   </div>
-                  <div className="icon-wrapper-soc ms-2">
-                    <img src="/assets/icons/moonfarmer.png" alt="logo" />
+                  <div className="icon-wrapper-soc ms-2 pointer">
+                    <img src="/assets/icons/logo-twitter.png" alt="logo" />
                   </div>
-                </div>
+                </div> 
 
               </div>
             </div>
@@ -675,8 +675,8 @@ export default function UniPairExplorer() {
               <div className="positions-tab">My Positions</div>
               <div className="rest-tab">
                 <p>ADAT <span style={{ fontSize: 12 }}>(last 526 trades)</span></p>
-                <div className="sip-ic ms-3">
-                  <i className="material-icons">filter_alt</i>
+                <div className="sip-ic ms-3 pointer">
+                  <i className="material-icons ">filter_alt</i>
                 </div>
               </div>
             </div>
