@@ -6,11 +6,9 @@ export default function LeftTab(props) {
   // const sidebarCollapsed = localStorage.getItem('sidebar-collapsed')
   // const [isExpanded, setIsExpanded] = React.useState(false)
 
-  // React.useEffect(() => {
-  //   if (!props.isMobile) {
-  //     setIsExpanded(true)
-  //   }
-  // }, [props])
+  React.useEffect(() => {
+    console.log('props', props)
+  }, [props.theme])
 
   const { parent, child } = useParams()
 
@@ -284,9 +282,14 @@ export default function LeftTab(props) {
     }
   ]
 
+  const changeTheme = (val) => {
+    const cur = props.theme === 'dark' ? 'light' : 'dark'
+    // props.setTheme(cur)
+  }
+
   return (
-    <div className={props.isMobile ? props.expanded ? 'left-tabs mobile' : 'd-none' : 'left-tabs' }>
-      <div className="brand-head pointer" onClick={goToLandingPage} >
+    <div className={props.isMobile ? props.expanded ? `left-tabs mobile ${props.theme} ` : `d-none` : `left-tabs ${props.theme}` }>
+      <div className={`brand-head pointer ${props.theme}`} onClick={goToLandingPage} >
         <img src="/assets/logo_gram.png" alt="logo" className="logo-only" />
         <img src="/assets/logo.png" alt="logo" className="logo-with-text" />
       </div>
@@ -296,52 +299,58 @@ export default function LeftTab(props) {
         {parent === 'bsc' && bscSidebar.map((i, index) => {
           if (!i.icon && !i.to) return (
             <div key={index}>
-              <div className='tab-menu-not-hover text-white' >
+              <div className='tab-menu-not-hover ' >
                 {i.icon !== '' && <img src={i.icon} alt="icons" />}
-                <p className="text-menu">{i.name} </p>
+                <p className={`text-menu ${props.theme}`}>{i.name} </p>
               </div>
             </div>
           )
           if (i.icon && !i.to) return (
-            <div key={index}>
-              <div className='tab-menu text-white' >
+            <div 
+              key={index} 
+              onClick={()=> {
+                i.name==='New Pairs Bot' && window.open('https://web.telegram.org/')
+                i.name==='Theme Mode' && changeTheme()
+              }}
+            >
+              <div className='tab-menu ' >
                 {i.icon !== '' && <img src={i.icon} alt="icons" />}
-                <p className="text-menu">{i.name} </p>
+                <p className={`text-menu ${props.theme}`}>{i.name} </p>
               </div>
             </div>
           )
           if (i.to) return (
             <Link key={index} to={i.to} replace className="link-wrap">
-            <div className={child === i.to ? 't-selected text-white' : 'tab-menu text-white'} >
-              {i.icon !== '' && <img src={i.icon} alt="icons" />}
-              <p className="text-menu">{i.name} </p>
-            </div>
-          </Link>
+              <div className={child === i.to ? 't-selected ' : 'tab-menu '} >
+                {i.icon !== '' && <img src={i.icon} alt="icons" />}
+                <p className={`text-menu ${props.theme}`}>{i.name} </p>
+              </div>
+            </Link>
           )
         })}
 
         {parent === 'ether' && etherSidebar.map((i, index) => {
           if (!i.icon && !i.to) return (
             <div key={index}>
-              <div className='tab-menu-not-hover text-white' >
+              <div className='tab-menu-not-hover ' >
                 {i.icon !== '' && <img src={i.icon} alt="icons" />}
-                <p className="text-menu">{i.name} </p>
+                <p className={`text-menu ${props.theme}`}>{i.name} </p>
               </div>
             </div>
           )
           if (i.icon && !i.to) return (
-            <div key={index}>
-              <div className='tab-menu text-white' >
+            <div key={index} onClick={()=> i.name==='New Pairs Bot' ? window.open('https://web.telegram.org/') : null}>
+              <div className='tab-menu ' >
                 {i.icon !== '' && <img src={i.icon} alt="icons" />}
-                <p className="text-menu">{i.name} </p>
+                <p className={`text-menu ${props.theme}`}>{i.name} </p>
               </div>
             </div>
           )
           if (i.to) return (
             <Link key={index} to={i.to} replace className="link-wrap">
-            <div className={child === i.to ? 't-selected text-white' : 'tab-menu text-white'} >
+            <div className={child === i.to ? 't-selected ' : 'tab-menu '} >
               {i.icon !== '' && <img src={i.icon} alt="icons" />}
-              <p className="text-menu">{i.name} </p>
+              <p className={`text-menu ${props.theme}`}>{i.name} </p>
             </div>
           </Link>
           )
@@ -350,25 +359,25 @@ export default function LeftTab(props) {
         {parent === 'polygon' && polySidebar.map((i, index) => {
           if (!i.icon && !i.to) return (
             <div key={index}>
-              <div className='tab-menu-not-hover text-white' >
+              <div className='tab-menu-not-hover ' >
                 {i.icon !== '' && <img src={i.icon} alt="icons" />}
-                <p className="text-menu">{i.name} </p>
+                <p className={`text-menu ${props.theme}`}>{i.name} </p>
               </div>
             </div>
           )
           if (i.icon && !i.to) return (
-            <div key={index}>
-              <div className='tab-menu text-white' >
+            <div key={index} onClick={()=> i.name==='New Pairs Bot' ? window.open('https://web.telegram.org/') : null}>
+              <div className='tab-menu ' >
                 {i.icon !== '' && <img src={i.icon} alt="icons" />}
-                <p className="text-menu">{i.name} </p>
+                <p className={`text-menu ${props.theme}`}>{i.name} </p>
               </div>
             </div>
           )
           if (i.to) return (
             <Link key={index} to={i.to} replace className="link-wrap">
-            <div className={child === i.to ? 't-selected text-white' : 'tab-menu text-white'} >
+            <div className={child === i.to ? 't-selected ' : 'tab-menu '} >
               {i.icon !== '' && <img src={i.icon} alt="icons" />}
-              <p className="text-menu">{i.name} </p>
+              <p className={`text-menu ${props.theme}`}>{i.name} </p>
             </div>
           </Link>
           )

@@ -21,7 +21,7 @@ import UserAccount from '../pages/UserAccount'
 import Configuration from '../pages/Configuration'
 
 
-export default function Body() {
+export default function Body(props) {
 
   const { parent, child } = useParams()
 
@@ -31,11 +31,11 @@ export default function Body() {
       main: () => {
         switch (parent) {
           case 'bsc':
-            return <DashboardBsc />
+            return <DashboardBsc theme={props.theme} />
           case 'ether':
-            return <DashboardEther />
+            return <DashboardEther theme={props.theme} />
           case 'polygon':
-            return <DashboardPolygon />
+            return <DashboardPolygon theme={props.theme} />
           default:
             return
         }
@@ -46,9 +46,9 @@ export default function Body() {
       main: () => {
         switch (parent) {
           case 'bsc':
-            return <LivePairsBsc />
+            return <LivePairsBsc  theme={props.theme}/>
           case 'polygon':
-            return <LivePairsPoly />
+            return <LivePairsPoly theme={props.theme}/>
           default:
             return
         }
@@ -105,12 +105,14 @@ export default function Body() {
     }
   ]
 
+  console.log('props', props)
+
   return (
     <div >
       <Route path={'/app/:parent/:child'} >
         {url.map((i, id) => {
           if (i.name === child) {
-            return <i.main key={id} />
+            return <i.main key={id}  />
           }
           return (
             <div key={id} className="h-100 w-100 centering-element"/>

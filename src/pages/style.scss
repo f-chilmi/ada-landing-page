@@ -2,9 +2,16 @@
   background-color: #160b2c;
 }
 
+.light {
+  background-color: #ffff !important;
+}
+
 .pair {
   text-decoration: none !important;
   color: white !important;
+  &.text-card-dark {
+    color: #110822 !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -39,6 +46,10 @@
   }
 
   .brand-head {
+    &.light {
+      background-color: #ffff !important;
+      color: #46297c !important;
+    }
     background-color: #46297c;
     height: 40px;
     // width: 40px;
@@ -64,18 +75,11 @@
     }
   }
 
-  // .left-tabs {
-  //   background-color: #46297c;
-  //   width: 40px;
-  //   position: absolute;
-  //   top: -40px;
-  //   left: 0;
-  //   bottom: 0;
-  //   height: calc(100% + 40px);
-  //   z-index: 99;
-  // }
-
   .left-tabs {
+    &.light {
+      background-color: #ffff !important;
+      color: #46297c !important;
+    }
     background-color: #46297c;
     width: 80vw;
     height: 100vh;
@@ -103,6 +107,9 @@
       display: block;
       text-decoration: none;
       color: white;
+      &.light {
+        color: #46297c !important;
+      }
     }
   }
 
@@ -202,11 +209,6 @@
 }
 
 @media (min-width: 768px) {
-
-  .body-card {
-    // width: 45%;
-  }
-
   .logo-ether {
     width: 30px;
     height: 30px;
@@ -233,6 +235,10 @@
   }
 
   .brand-head {
+    &.light {
+      background-color: #ffff !important;
+      color: #46297c !important;
+    }
     background-color: #46297c;
     height: 70px;
     // width: 70px;
@@ -259,6 +265,10 @@
   }
 
   .left-tabs {
+    &.light {
+      background-color: #ffff !important;
+      color: #46297c !important;
+    }
     background-color: #46297c;
     width: 70px;
     height: calc(100% + 70px);
@@ -280,6 +290,9 @@
         display: block;
         text-decoration: none;
         color: white;
+        &.light {
+          color: #46297c !important;
+        }
       }
       .logo-only {
         display: none;
@@ -395,6 +408,10 @@
 }
 
 .left-tabs-hidden {
+  &.light {
+    background-color: #ffff !important;
+    color: #46297c !important;
+  }
   background-color: #46297c;
   width: 70px;
   position: fixed;
@@ -635,6 +652,9 @@
 .body-body {
   background-color: #160b2c;
   min-height: 70vh;
+  &.light {
+    background-color: #ebecee;
+  }
 }
 
 .vertical-middle {

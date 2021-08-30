@@ -12,8 +12,9 @@ export default function Layout() {
 
   const [width, setWidth] = React.useState(window.screen.availWidth)
   const [expanded, setExpanded] = React.useState(false)
+  const [theme, setTheme] = React.useState('dark')
 
-  console.log("pathname", pathname, useRouteMatch(), parent)
+  console.log("theme", theme)
 
   if (pathname === "/app") {
     window.location.href = '/app/bsc'
@@ -30,16 +31,24 @@ export default function Layout() {
     }
   }, [])
 
-  React.useEffect(() => {
-    console.log("route changed", parent)
-  }, [parent])
+  // React.useEffect(() => {
+  //   console.log("route changed", parent)
+  // }, [parent])
 
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
   }
+
+  const changeTheme = (val) => {
+    console.log("called")
+    setTheme(val)
+  }
+
   const isMobile = (width <= 768);
 
-  let classRight = isMobile ? 'right-body bg-160b2c' : 'right-body desktop bg-160b2c'
+  const background = theme === 'dark' ? 'bg-160b2c' : 'light';
+
+  let classRight = isMobile ? `right-body ${background}` : `right-body desktop ${background}`
 
   return (
     <Router>
@@ -56,7 +65,13 @@ export default function Layout() {
         </button>
 
         <Route exact path='/app/:parent/:child' >
-          <LeftTab isMobile={isMobile} expanded={expanded} setExpanded={(val) => setExpanded(val)} />
+          <LeftTab 
+            isMobile={isMobile} 
+            expanded={expanded} 
+            setExpanded={(val) => setExpanded(val)}  
+            setTheme={(val) => changeTheme(val)}  
+            theme={theme}
+          />
         </Route>
 
         {/* right body  */}
@@ -97,7 +112,10 @@ export default function Layout() {
           </div>
 
           <Route exact path='/app/:parent/:child' >
-            <Body /> 
+            <Body
+              setTheme={(val) => changeTheme(val)}  
+              theme={theme}
+            /> 
           </Route>
 
           <Footer />

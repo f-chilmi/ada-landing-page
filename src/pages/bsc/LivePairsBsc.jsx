@@ -2,7 +2,7 @@ import React from 'react'
 import BootstrapTable from 'react-bootstrap-table-next';
 
 
-export default function LivePairsBsc() {
+export default function LivePairsBsc(props) {
   const columns = [
   {
     dataField: 'token',
@@ -496,10 +496,10 @@ export default function LivePairsBsc() {
     },
 
   ]
-  
+  const bg = props.theme === 'dark' ? '' : 'light'
   
   return (
-    <div className="body-body">
+    <div className={`body-body ${bg} `}>
 
       <div className="container">
         <div className="d-flex justify-content-between align-items-center pt-4">
